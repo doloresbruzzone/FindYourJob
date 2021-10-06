@@ -5,21 +5,22 @@
 
     class Student extends Person
     {
-        private $recordId; /*ver si este recorId hay q dejarlo */
+        private $studentId; 
         private $fileNumber;
         private $gender; 
         private $birthDate;
         private $phoneNumber;
         private $active;
+        private $careerId;
 
-        public function getRecordId()
+        public function getStudentId()
         {
-            return $this->recordId;
+            return $this->studentId;
         }
 
-        public function setRecordId($recordId)
+        public function setStudentId($studentId)
         {
-            $this->recordId = $recordId;
+            $this->studentId = $studentId;
         }
 
         public function getFileNumber(){
@@ -60,6 +61,14 @@
 
         public function setActive($active){
             $this->active = $active;
+        }
+
+        public function getCareerId(){
+            return $this->careerId;
+        }
+
+        public function setCareerId($careerId){
+            $this->careerId = $careerId;
         }
 
     }
