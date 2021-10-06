@@ -6,6 +6,7 @@
     class Student extends Person
     {
         private $recordId;
+        private $atrPrueba;
 
         public function getRecordId()
         {
