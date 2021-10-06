@@ -5,7 +5,9 @@
     {
         private $firstName;
         private $lastName;
-
+        private $dni;
+        private $email;
+        
         public function getFirstName()
         {
             return $this->firstName;
@@ -25,5 +27,22 @@
         {
             $this->lastName = $lastName;
         }
+
+        public function getDni(){
+            return $this->dni;
+        }
+
+        public function setDni($dni){
+            $this->dni = $dni;
+        }
+
+        public function getEmail(){
+            return $this->email;
+        }
+
+        public function setEmail($email){
+            $this->email = $email;
+        }
+        
     }
 ?>
