@@ -12,7 +12,6 @@
         private $phoneNumber;
         private $active;
         private $careerId;
-        ///asdasdasd
 
         public function getStudentId()
         {
