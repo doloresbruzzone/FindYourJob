@@ -10,6 +10,3 @@ define('API_KEY','4f3bceed-50ba-4461-a910-518598664c08');
 define('API_URL', 'https://utn-students-api.herokuapp.com/api/');
 ?>
 
-
-
-
