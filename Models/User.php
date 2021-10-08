@@ -5,8 +5,7 @@ class User
 {
     private $email; 
     private $password;
-    
-
+   
 
     /**
      * Get the value of email
@@ -47,6 +46,8 @@ class User
 
         return $this;
     }
+
+   
 }
 
 ?>

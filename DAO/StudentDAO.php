@@ -41,6 +41,7 @@
                 $valuesArray["gender"] = $student->getGender();
                 $valuesArray["phoneNumber"] = $student->getPhoneNumber();
                 $valuesArray["active"] = $student->getActive();
+                $valuesArray["role"] = 2;
 
                 array_push($arrayToEncode, $valuesArray);
             }
@@ -80,16 +81,13 @@
                     $student->setGender($valuesArray["gender"]);
                     $student->setPhoneNumber($valuesArray["phoneNumber"]);
                     $student->setActive($valuesArray["active"]);
+                    $student->setRole($valuesArray["role"]);
 
                     array_push($this->studentList, $student);
                 } 
             } catch (Exception $e) {
                 print_r($e);
             }
-        }
-
-        private function login(){
-            
         }
 
 

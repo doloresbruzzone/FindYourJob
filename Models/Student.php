@@ -12,6 +12,7 @@
         private $phoneNumber;
         private $active;
         private $careerId;
+        private $role;
         
         public function getStudentId()
         {
@@ -70,6 +71,18 @@
         public function setCareerId($careerId){
             $this->careerId = $careerId;
         }
+
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    public function setRole($role)
+    {
+        $this->role = $role;
+
+        return $this;
+    }
 
     }
 ?>

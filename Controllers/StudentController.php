@@ -15,14 +15,21 @@
 
         public function ShowAddView()
         {
+
             require_once(VIEWS_PATH."student-add.php");
         }
 
         public function ShowListView()
         {
             $studentList = $this->studentDAO->GetAll();
-
+             var_dump($studentList);
             require_once(VIEWS_PATH."student-list.php");
+        }
+
+
+        public function validateStudent($email , $password){
+
+
         }
 
         public function Add($recordId, $firstName, $lastName)
