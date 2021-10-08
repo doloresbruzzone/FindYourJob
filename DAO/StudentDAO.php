@@ -31,7 +31,7 @@
 
             foreach($this->studentList as $student)
             {
-                $valuesArray["recordId"] = $student->getRecordId();
+                $valuesArray["studentId"] = $student->getStudentId();
                 $valuesArray["firstName"] = $student->getFirstName();
                 $valuesArray["lastName"] = $student->getLastName();
                 $valuesArray["dni"] = $student->getDni();
@@ -70,7 +70,7 @@
                 {
                     $student = new Student();
 
-                    $student->setRecordId($valuesArray["recordId"]);
+                    $student->setStudentId($valuesArray["studentId"]);
                     $student->setFirstName($valuesArray["firstName"]);
                     $student->setLastName($valuesArray["lastName"]);
                     $student->setDni($valuesArray["dni"]);
