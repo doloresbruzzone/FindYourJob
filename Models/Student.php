@@ -5,7 +5,7 @@
 
     class Student extends Person
     {
-        private $recordId; /*ver si este recorId hay q dejarlo */
+        private $recordId; 
         private $fileNumber;
         private $gender; 
         private $birthDate;

@@ -3,6 +3,7 @@
 
     use DAO\IStudentDAO as IStudentDAO;
     use Models\Student as Student;
+    use Exception as Exception;
 
     class StudentDAO implements IStudentDAO
     {
@@ -12,7 +13,7 @@
         {
             $this->RetrieveData();
             
-            array_push($this->studentList, $student);
+            array_push($this->studentList, $student); 
 
             $this->SaveData();
         }
@@ -33,34 +34,57 @@
                 $valuesArray["recordId"] = $student->getRecordId();
                 $valuesArray["firstName"] = $student->getFirstName();
                 $valuesArray["lastName"] = $student->getLastName();
+                $valuesArray["dni"] = $student->getDni();
+                $valuesArray["fileNumber"] = $student->getFileNumber();
+                $valuesArray["email"] = $student->getEmail();
+                $valuesArray["birthDate"] = $student->getBirthDate();
+                $valuesArray["gender"] = $student->getGender();
+                $valuesArray["phoneNumber"] = $student->getPhoneNumber();
+                $valuesArray["active"] = $student->getActive();
 
                 array_push($arrayToEncode, $valuesArray);
             }
 
             $jsonContent = json_encode($arrayToEncode, JSON_PRETTY_PRINT);
             
-            file_put_contents('Data/students.json', $jsonContent);
+            file_put_contents(''. API_KEY, $jsonContent);
         }
 
         private function RetrieveData()
         {
             $this->studentList = array();
+            try{
+                $options = array(
+                    'hhtp'=> array(
+                        'method'=>'GET',
+                        'header'=> 'x-api-key: 4f3bceed-50ba-4461-a910-518598664c08')
+                );
 
-            if(file_exists('Data/students.json'))
-            {
-                $jsonContent = file_get_contents('Data/students.json');
+                $context = stream_context_create($options);
 
-                $arrayToDecode = ($jsonContent) ? json_decode($jsonContent, true) : array();
+                $jsonContent = file_get_contents(API_URL.'Student', false, $context);
+
+                $arrayToDecode = json_decode($jsonContent, true);
 
                 foreach($arrayToDecode as $valuesArray)
                 {
                     $student = new Student();
+
                     $student->setRecordId($valuesArray["recordId"]);
                     $student->setFirstName($valuesArray["firstName"]);
                     $student->setLastName($valuesArray["lastName"]);
+                    $student->setDni($valuesArray["dni"]);
+                    $student->setFileNumber($valuesArray["fileNumber"]);
+                    $student->setEmail($valuesArray["email"]);
+                    $student->setBirthDate($valuesArray["birthDate"]);
+                    $student->setGender($valuesArray["gender"]);
+                    $student->setPhoneNumber($valuesArray["phoneNumber"]);
+                    $student->setActive($valuesArray["active"]);
 
                     array_push($this->studentList, $student);
-                }
+                } 
+            } catch (Exception $e) {
+                print_r($e);
             }
         }
     }
