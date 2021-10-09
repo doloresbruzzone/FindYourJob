@@ -1,9 +1,9 @@
+
 <?php require_once "header.php";?>
 <main class="d-flex align-items-center justify-content-center height-100">
      <div class="content">
           <header class="text-center">
                <h2>Find Your Job </h2>
-     
           </header>
           <form action=<?php echo FRONT_ROOT."Student/ShowListView"?> method="Post" class="login-form bg-dark-alpha p-5 text-white">
                <div class="form-group">
@@ -18,7 +18,7 @@
                <button class="btn btn-dark btn-block btn-lg" type="submit">Iniciar Sesión</button>
                <div>
                <br>
-              <span style="font-weight: bold;"> No estas registrado? <a href="<?php echo FRONT_ROOT."Session/ShowSignUpView"?>">Hace click acá!</a></span>
+              <!-- <span style="font-weight: bold;"> No estas registrado? <a href="<?php echo FRONT_ROOT."Session/ShowSignUpView"?>">Hace click acá!</a></span> -->
                </div>
            </div>
             </form>

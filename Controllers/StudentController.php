@@ -32,7 +32,7 @@
 
         }
 
-        public function Add($studentId, $firstName, $lastName)
+        /* public function Add($studentId, $firstName, $lastName)
         {
             $student = new Student();
             $student->setStudentId($studentId);
@@ -42,6 +42,6 @@
             $this->studentDAO->Add($student);
 
             $this->ShowAddView();
-        }
+        } */
     }
 ?>
