@@ -66,6 +66,35 @@
             }
         }
 
+        public function GetCompany($companyName)
+        {
+            $this->RetrieveData();
+            $companyExists = null;
+
+            foreach($this->companyList as $company) {
+                if($company->getName() == $companyName) {
+                    $companyExists = $company;
+                }
+            }
+            return $companyExists;
+        }
+
+        public function RemoveCompany($companyName) {
+
+            $this->RetrieveData();
+            $flag=0;
+    
+            foreach($this->companyList as $company){
+                if($company->getName() == $companyName){
+                    $key = array_search($company, $this->companyList);
+                    unset($this->companyList[$key]);
+                    $flag=1;
+                }
+            }
+            $this->SaveData();
+            return $flag;
+        }
+
         //Need this function to return correct file json path
         function GetJsonFilePath(){
 
@@ -76,7 +105,6 @@
             }else{
                 $jsonFilePath = "../".$initialPath;
             }
-
             return $jsonFilePath;
         }
 
