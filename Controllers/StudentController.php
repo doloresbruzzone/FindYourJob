@@ -13,35 +13,59 @@
             $this->studentDAO = new StudentDAO();
         }
 
-        public function ShowAddView()
-        {
-
-            require_once(VIEWS_PATH."student-add.php");
-        }
-
-        public function ShowListView()
+        public function ShowLoginView($message = "")
         {
             $studentList = $this->studentDAO->GetAll();
-             var_dump($studentList);
+
+            var_dump($studentList);
+
+            require_once(VIEWS_PATH."login.php");
+        }
+
+        public function ShowListView($message = "")
+        {
+            require_once(VIEWS_PATH."validate-session.php");
+
+            $studentList = $this->studentDAO->GetAll();
+
+            var_dump($studentList);
+            
             require_once(VIEWS_PATH."student-list.php");
         }
 
+        public function ShowAdminHomeView($message = "")
+        {
+            require_once(VIEWS_PATH."validate-session.php");
 
-        public function validateStudent($email , $password){
+            require_once(VIEWS_PATH."admin-home.php");
+        }
 
+        public function validateUser($email){
+
+            $admin = "adminUser@gmail.com";
+
+           $student = $this->studentDAO->GetEmail($email);
+
+           if($student != null){
+
+            $_SESSION['login'] = $student;
+
+            $this->ShowListView("belcome student");
+
+           }if($admin === $email){
+
+            $_SESSION['login'] = $admin;
+
+                $this->ShowAdminHomeView("belcome admin");
+
+             }else{
+
+                $this->ShowLoginView("no exist user");
+             }
+
+           }
+            
 
         }
 
-        /* public function Add($studentId, $firstName, $lastName)
-        {
-            $student = new Student();
-            $student->setStudentId($studentId);
-            $student->setfirstName($firstName);
-            $student->setLastName($lastName);
-
-            $this->studentDAO->Add($student);
-
-            $this->ShowAddView();
-        } */
-    }
 ?>

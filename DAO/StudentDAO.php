@@ -49,5 +49,40 @@
             } 
         }
 
+
+        public function getEmail($email){
+
+            $student = null;
+
+            $studentList = $this->getAll();
+
+            foreach($studentList as $students){
+
+                if($students->getEmail() === $student){
+                     
+                    $student = new Student();
+
+                    $student = $students;
+                }
+            }
+
+            return $student;
+        }
+        public function GetEmail($email){
+
+            $this->RetrieveData();
+
+            $student = null;
+            
+            if(!empty($this->studentList)){
+                foreach($this->$studentList as $students){
+                    if($students->getEmail() == $email){
+                        $student= $students;
+                    }
+                }
+            }
+    
+            return $student;
+        }
     }
 ?>

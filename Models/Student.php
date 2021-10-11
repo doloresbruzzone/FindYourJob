@@ -12,7 +12,7 @@
         private $phoneNumber;
         private $active;
         private $careerId;
-        private $role;
+      
         
         public function getStudentId()
         {
@@ -77,12 +77,6 @@
         return $this->role;
     }
 
-    public function setRole($role)
-    {
-        $this->role = $role;
-
-        return $this;
-    }
 
     }
 ?>
