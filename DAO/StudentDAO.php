@@ -19,11 +19,12 @@
         {
             $this->studentList = array();
 
-            $apiStudent = curl_init();
+            $apiStudent = curl_init(API_URL.'Student');
 
-            curl_setopt($apiStudent, CURLOPT_URL, API_URL.'Student');
+            //curl_setopt($apiStudent, CURLOPT_URL, API_URL.'Student');
 
             curl_setopt($apiStudent, CURLOPT_HTTPHEADER, array(API_KEY));
+            curl_setopt($apiStudent, CURLOPT_RETURNTRANSFER, true);
 
             $response = curl_exec($apiStudent);
 
@@ -43,12 +44,10 @@
                 $student->setGender($valuesArray["gender"]);
                 $student->setPhoneNumber($valuesArray["phoneNumber"]);
                 $student->setActive($valuesArray["active"]);
-                $student->setRole($valuesArray["role"]);
 
                 array_push($this->studentList, $student);  
             } 
         }
-
 
         public function getEmail($email){
 
@@ -68,6 +67,7 @@
 
             return $student;
         }
+        /* 
         public function GetEmail($email){
 
             $this->RetrieveData();
@@ -83,6 +83,6 @@
             }
     
             return $student;
-        }
+        } */
     }
 ?>

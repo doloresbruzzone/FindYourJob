@@ -21,7 +21,7 @@
 
             require_once(VIEWS_PATH."login.php");
         }
-
+        
         public function ShowListView($message = "")
         {
             require_once(VIEWS_PATH."validate-session.php");
@@ -39,7 +39,7 @@
 
             require_once(VIEWS_PATH."admin-home.php");
         }
-
+        
         public function validateUser($email){
 
             $admin = "adminUser@gmail.com";
@@ -50,17 +50,17 @@
 
             $_SESSION['login'] = $student;
 
-            $this->ShowListView("belcome student");
+            $this->ShowListView("welcome student");
 
            }if($admin === $email){
 
             $_SESSION['login'] = $admin;
 
-                $this->ShowAdminHomeView("belcome admin");
+                $this->ShowAdminHomeView("welcome admin");
 
              }else{
 
-                $this->ShowLoginView("no exist user");
+                $this->ShowLoginView("user does not exist");
              }
 
            }
