@@ -108,6 +108,20 @@
             return $jsonFilePath;
         }
 
+        public function ModifyCompany (Company $modifiedCompany) {
+
+            $this->RetrieveData();
+
+            foreach ($this->companyList as $company) {
+                if ($company->getName() == $modifiedCompany->getName ()) {
+                    $company = $modifiedCompany;
+                }
+            }
+            $this->SaveData;
+        }
+
+        //No sería mejor usar un numero de empresa?
+
     }
 
 ?>
