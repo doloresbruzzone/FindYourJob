@@ -22,7 +22,7 @@
           <form action=<?php echo FRONT_ROOT.'Home/login'?> method="post" class="login-form bg-dark-alpha p-5 text-white">
                <div class="form-group">
                     <label for="">USERNAME</label>
-                    <input type="email" name="email" class="form-control form-control-lg" placeholder="type email" requierd>
+                    <input type="email" name="email" class="form-control form-control-lg" required placeholder="Type email" >
                </div>
                <button class="btn btn-dark btn-block btn-lg" type="submit" >Log In</button>
             </form>
