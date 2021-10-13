@@ -28,11 +28,18 @@ class CompanyController
         }
     }
 
-    public function ShowListView()
+    public function ShowListViewAdmin()
     {
         Utils::checkAdminSession();
         $companies = $this->companyDAO->GetAll();
         require_once(VIEWS_PATH."company-management.php");
+    }
+
+    public function ShowListViewStudent()
+    {
+        Utils::checkStudentSession();
+        $companies = $this->companyDAO->GetAll();
+        require_once(VIEWS_PATH."list-companies-std.php");
     }
 
     public function AddCompany($companyName, $yearFoundation, $city, $description, $email, $phoneNumber, $logo)
@@ -54,9 +61,7 @@ class CompanyController
             require_once(VIEWS_PATH . "addCompany.php");
 
         }
-
     }
-
 
     public function ModifyCompany($companyName, $yearFoundation, $city, $description, $email, $phoneNumber, $logo)
     {
@@ -73,7 +78,7 @@ class CompanyController
         
         $this->companyDAO->modifyCompany($company);
 
-        $this->ShowListView();
+        $this->ShowListViewAdmin();
     }
 
     function ShowViewsAdd(){
@@ -87,11 +92,12 @@ class CompanyController
         $removed = $this->companyDAO->RemoveCompany($companyName, $email);
         
         if($removed == 1){
-            require_once(VIEWS_PATH."company-management.php");
+            //agregar para que muestre mensaje de exito
+            $this->ShowListViewAdmin();
         }
         else{ 
             //agregar para que muestre mensaje de error
-            require_once(VIEWS_PATH."company-management.php");
+            $this->ShowListViewAdmin();
         }
     }
 

@@ -1,5 +1,4 @@
 <html>
-    
     <h2>company management</h2>
     <main>
         <table style="text-align:center;">
@@ -35,7 +34,7 @@
         </table>
     
         <form action="<?php echo FRONT_ROOT."Company/DeleteCompany" ?>" method="post">
-        
+
             <table style="max-width: 35%;" >
             <thead>
               <tr>

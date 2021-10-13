@@ -4,7 +4,7 @@
     use Models\Company as Company;
     use DAO\ICompanyDAO as ICompanyDAO;
 
-    class CompanyDAO extends ICompanyDAO{
+    class CompanyDAO implements ICompanyDAO{
 
         private $companyList = array();
 

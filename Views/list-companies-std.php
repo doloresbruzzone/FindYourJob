@@ -6,13 +6,35 @@
           <header class="text-center">
                <h2>Companies List</h2>
           </header>
-          <form action=<?php echo FRONT_ROOT."Student/validateUser"?> method="get" class="login-form bg-dark-alpha p-5 text-white">
-               <div class="form-group">
-                    <label for="fname">USERS</label>
-                    <input type="email"  id="fname" name="student" class="form-control form-control-lg" placeholder="Email" requierd>
-               </div>
-               <button class="btn btn-dark btn-block btn-lg" type="submit" >Log In</button>
-            </form>
+          <table style="text-align:center;">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Foundation Year</th>
+              <th>City</th>
+              <th>Description</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Logo</th>
+            </tr>
+          </thead>
+          <tbody>
+              <?php if(!empty($companies)){ 
+                  foreach($companies as $company){ ?>
+                    
+                      <tr>
+                        <td><?php echo $company->getName(); ?></td>
+                        <td><?php echo $company->getYearFoundation(); ?></td>
+                        <td><?php echo $company->getCity(); ?></td>
+                        <td><?php echo $company->getDescription(); ?></td>
+                        <td><?php echo $company->getEmail(); ?></td>
+                        <td><?php echo $company->getPhoneNumber(); ?></td>
+                        <td><?php echo $company->getLogo(); ?></td> 
+                      </tr>
+                      <?php
+                  }
+              } ?>
+            </tbody>
+        </table>
      </div>
-     
 </main>
