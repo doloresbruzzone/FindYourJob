@@ -47,7 +47,7 @@
             } 
         }
 
-        public function GetCompany($companyName)
+        /*public function GetCompany($companyName)
         {
             $this->RetrieveData();
             $companyExists = null;
@@ -58,6 +58,19 @@
                 }
             }
             return $companyExists;
+        }*/
+ 
+        public function GetByStudentDni($studentDni)
+        {
+            $this->RetrieveData();
+    
+            foreach ($this->studentList as $student) {
+                if ($student->GetByStudentDni() == $studentDni){
+                    return $student;
+                }
+            }
+    
+            return null;
         }
 
         public function existsByEmail($email){
