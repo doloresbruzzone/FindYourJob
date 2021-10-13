@@ -13,6 +13,7 @@
                     </thead>
                     <tbody>
                          <?php
+                         if (isset ($studentList)){ 
                               foreach($studentList as $student)
                               {
                                    ?>
@@ -20,9 +21,11 @@
                                              <td><?php echo $student->getRecordId() ?></td>
                                              <td><?php echo $student->getLastName() ?></td>
                                              <td><?php echo $student->getFirstName() ?></td>
+                                             echo "<td><a href=" . FRONT_ROOT . "Student/ShowStudent/". $studentId .">Ver Alumno</a></td>";
                                         </tr>
                                    <?php
                               }
+                         }
                          ?>
                          </tr>
                     </tbody>
