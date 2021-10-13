@@ -15,10 +15,10 @@ class CompanyController
         $this->companyDAO = new CompanyDAO();
     }
 
-    public function ShowCompany ($nameCompany)
+    public function ShowCompany ($nameCompany, $email)
     {
         Utils:: checkAdminSession();
-        $company = $this->companyDAO->GetCompany($nameCompany);
+        $company = $this->companyDAO->GetCompany($nameCompany, $email);
         if (isset($adminLoggedIn)) 
         {
             require_once(VIEWS_PATH."admin-company-show.php");
@@ -32,14 +32,14 @@ class CompanyController
     {
         Utils::checkAdminSession();
         $companies = $this->companyDAO->GetAll();
-        require_once(VIEWS_PATH."company-list.php");
+        require_once(VIEWS_PATH."company-management.php");
     }
 
     public function AddCompany($companyName, $yearFoundation, $city, $description, $email, $phoneNumber, $logo)
     {
         Utils::checkAdminSession();
 
-        if ($this->companyDAO->GetCompany($companyName)== NULL) 
+        if ($this->companyDAO->GetCompany($companyName, $email)== NULL) 
         {
             $newCompany = new Company();
             $newCompany->setName($companyName);
@@ -61,9 +61,8 @@ class CompanyController
     public function ModifyCompany($companyName, $yearFoundation, $city, $description, $email, $phoneNumber, $logo)
     {
         Utils::checkAdminSession();
-        $company = $this->companyDAO->GetCompany($companyName);
+        $company = $this->companyDAO->GetCompany($companyName, $email);
 
-    
         $company->setName($companyName);
         $company->setYearFoundantion($yearFoundation);
         $company->setCity($city);
@@ -77,6 +76,24 @@ class CompanyController
         $this->ShowListView();
     }
 
+    function ShowViewsAdd(){
+        Utils::checkAdminSession();
+        require_once(VIEWS_PATH."addCompany.php");
+    }
+
+    public function DeleteCompany($companyName, $email){
+        Utils::checkAdminSession();
+
+        $removed = $this->companyDAO->RemoveCompany($companyName, $email);
+        
+        if($removed == 1){
+            require_once(VIEWS_PATH."company-management.php");
+        }
+        else{ 
+            //agregar para que muestre mensaje de error
+            require_once(VIEWS_PATH."company-management.php");
+        }
+    }
 
 
 }

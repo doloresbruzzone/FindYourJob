@@ -66,26 +66,26 @@
             }
         }
 
-        public function GetCompany($companyName)
+        public function GetCompany($companyName, $email)
         {
             $this->RetrieveData();
-            $companyExists = null;
+            $comp = null;
 
             foreach($this->companyList as $company) {
-                if($company->getName() == $companyName) {
-                    $companyExists = $company;
+                if($company->getName() == $companyName && $company->getEmail() == $email) {
+                    $comp = $company;
                 }
             }
-            return $companyExists;
+            return $comp;
         }
 
-        public function RemoveCompany($companyName) {
+        public function RemoveCompany($companyName, $email) {
 
             $this->RetrieveData();
             $flag=0;
     
             foreach($this->companyList as $company){
-                if($company->getName() == $companyName){
+                if(($company->getName() == $companyName) && ($company->getEmail() == $email)){
                     $key = array_search($company, $this->companyList);
                     unset($this->companyList[$key]);
                     $flag=1;

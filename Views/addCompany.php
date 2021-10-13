@@ -4,7 +4,7 @@
             <h2>Add Company</h2>
         </header>
         
-        <form method="POST" action=<?php echo FRONT_ROOT."Company/add"?> method="post">
+        <form method="POST" action=<?php echo FRONT_ROOT."Company/AddCompany"?> method="post">
             <div class="form-group">
                 <form>
                     <div class="form-group">
