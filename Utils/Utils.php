@@ -1,16 +1,25 @@
 <?php
 
-namespace Utils;
+    namespace Utils;
 
-class Utils{
+    class Utils{
 
-    public static function checkSession ()
-    {
-        if (!isset($_SESSION ['alumno']))
-        {
-            header ("location:". FRONT_ROOT);
+        public static function checkStudentSession(){
+            if(!isset($_SESSION['student'])){
+                header("Location:".FRONT_ROOT);
+            }
+        }
+
+        public static function checkAdminSession(){
+            if(!isset($_SESSION['admin'])){
+                header("Location:".FRONT_ROOT);
+            }
+        }
+
+        public function logout(){
+            session_destroy();
+            header("Location: ".FRONT_ROOT);
         }
     }
-}
 
 ?>

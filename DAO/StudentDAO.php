@@ -21,15 +21,13 @@
 
             $apiStudent = curl_init(API_URL.'Student');
 
-            //curl_setopt($apiStudent, CURLOPT_URL, API_URL.'Student');
-
             curl_setopt($apiStudent, CURLOPT_HTTPHEADER, array(API_KEY));
             curl_setopt($apiStudent, CURLOPT_RETURNTRANSFER, true);
 
             $response = curl_exec($apiStudent);
 
             $arrayToDecode = json_decode($response, true);
-            
+           
             foreach($arrayToDecode as $valuesArray)
             {
                 $student = new Student();
@@ -49,40 +47,30 @@
             } 
         }
 
-        public function getEmail($email){
+        public function GetCompany($companyName)
+        {
+            $this->RetrieveData();
+            $companyExists = null;
 
-            $student = null;
-
-            $studentList = $this->getAll();
-
-            foreach($studentList as $students){
-
-                if($students->getEmail() === $student){
-                     
-                    $student = new Student();
-
-                    $student = $students;
+            foreach($this->companyList as $company) {
+                if($company->getName() == $companyName) {
+                    $companyExists = $company;
                 }
             }
-
-            return $student;
+            return $companyExists;
         }
-        /* 
-        public function GetEmail($email){
 
+        public function existsByEmail($email){
+            $exists=false;
             $this->RetrieveData();
 
-            $student = null;
-            
-            if(!empty($this->studentList)){
-                foreach($this->$studentList as $students){
-                    if($students->getEmail() == $email){
-                        $student= $students;
-                    }
+            foreach($this->studentList as $student){
+                if($student->getEmail() == $email){
+                    $exists = true;
                 }
             }
-    
-            return $student;
-        } */
+            return $exists;
+        }
+        
     }
 ?>

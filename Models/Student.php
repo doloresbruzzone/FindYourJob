@@ -1,6 +1,5 @@
 <?php
     namespace Models;
-
     use Models\Person as Person;
 
     class Student extends Person
@@ -12,8 +11,38 @@
         private $phoneNumber;
         private $active;
         private $careerId;
-      
+        private $firstName;
+        private $lastName;
+        private $dni;
         
+        public function getFirstName()
+        {
+            return $this->firstName;
+        }
+
+        public function setFirstName($firstName)
+        {
+            $this->firstName = $firstName;
+        }
+
+        public function getLastName()
+        {
+            return $this->lastName;
+        }
+
+        public function setLastName($lastName)
+        {
+            $this->lastName = $lastName;
+        }
+
+        public function getDni(){
+            return $this->dni;
+        }
+
+        public function setDni($dni){
+            $this->dni = $dni;
+        }
+
         public function getStudentId()
         {
             return $this->studentId;
@@ -71,13 +100,6 @@
         public function setCareerId($careerId){
             $this->careerId = $careerId;
         }
-
-    public function getRole()
-    {
-        return $this->role;
-    }
-
-
     }
 ?>
 
