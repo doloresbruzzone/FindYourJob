@@ -53,11 +53,11 @@ class CompanyController
         
         if($removed == 1){
             //agregar para que muestre mensaje de exito
-            $this->ShowListViewStudent("Company deleted");
+            $this->ShowListViewAdmin("Company deleted");
         }
         else{ 
             //agregar para que muestre mensaje de error
-            $this->ShowListViewStudent("error");
+            $this->ShowListViewAdmin("error");
         }
     }
 
