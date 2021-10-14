@@ -35,7 +35,7 @@
                          <!-- Button trigger modal -->
                          <td>
                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                         Company Info
+                         +
                          </button>
                     </td>
                              <?php }

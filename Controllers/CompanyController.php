@@ -22,7 +22,7 @@ class CompanyController
         require_once(VIEWS_PATH."list-companies-std.php");
     }
 
-    function ShowViewsAdd($message = ""){
+    function ShowViewAddNewCompany($message = ""){
         Utils::checkAdminSession();
         require_once(VIEWS_PATH."addCompany.php");
     }

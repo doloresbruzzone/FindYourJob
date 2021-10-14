@@ -9,7 +9,7 @@
                <a class="nav-link" href="<?php echo FRONT_ROOT ?>Company/ShowListViewAdmin">Company Management</a>
           </li>
           <li class="nav-item">
-               <a class="nav-link" href="<?php echo FRONT_ROOT ?>Company/">Add Company </a>
+               <a class="nav-link" href="<?php echo FRONT_ROOT ?>Company/ShowViewAddNewCompany">Add Company </a>
           </li>
           <li class="nav-item">
                <a class="nav-link" href="<?php echo FRONT_ROOT ?>Company/LogOut">Logout</a>
