@@ -7,7 +7,7 @@
                <a class="nav-link" href="<?php echo FRONT_ROOT ?>Student/ShowAddView">Company Management</a>
           </li>
           <li class="nav-item">
-               <a class="nav-link" href="<?php echo FRONT_ROOT ?>Student/ShowListView">Logout</a>
-          </li>          
+               <a class="nav-link" href="<?php echo FRONT_ROOT ?>Company/LogOut">Logout</a>
+          </li>        
      </ul>
 </nav>

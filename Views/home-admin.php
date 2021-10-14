@@ -3,8 +3,10 @@
 /// Aca tiene que ir el session
 
 ?>
-<center>
+
 <h1> Home Admin </h1>
+
+<center>
 
 <a class="nav-link" href="list-form.php">Manejo Empresas</a>
 <a class="nav-link" href="list-form.php">Cargar Propuesta Laboral</a>
