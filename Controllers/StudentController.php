@@ -24,6 +24,10 @@
  
              return $exists;
          }
+
+         public function LogOut(){
+             Utils::logout();
+         }
     }
 
 ?>

@@ -16,7 +16,7 @@
             }
         }
 
-        public function logout(){
+        public static function logout(){
             session_destroy();
             header("Location: ".FRONT_ROOT);
         }
