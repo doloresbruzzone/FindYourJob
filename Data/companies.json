@@ -1,66 +1,24 @@
 [
     {
-        "idCompany": 1,
         "name": "company1",
-        "yearFoundantion": "2015",
-        "description": "Test1",
+        "yearFoundation": "2015",
         "city": "cityTest",
+        "description": "Test1",
         "logo": {
-            "name": "Test image.png",
-            "type": "image\/png",
-            "tmp_name": "C:\\wamp64\\tmp\\php6327.tmp",
-            "error": 0,
-            "size": 7432
+            "name": "Test image.png"
         },
         "email": "test1@gmail.com",
         "phoneNumber": "22334455"
     },
     {
-        "idCompany": 2,
         "name": "Company2",
-        "yearFoundantion": "2015",
-        "description": "test2",
+        "yearFoundation": "2015",
         "city": "cityTest",
+        "description": "test2",
         "logo": {
-            "name": "Test image2.png",
-            "type": "image\/png",
-            "tmp_name": "C:\\wamp64\\tmp\\phpBA21.tmp",
-            "error": 0,
-            "size": 7431
+            "name": "Test image2.png"
         },
         "email": "test2@gmail.com",
-        "phoneNumber": "22233344"
-    },
-    {
-        "idCompany": 3,
-        "name": "testing3",
-        "yearFoundantion": "2015",
-        "description": "test3",
-        "city": "cityTest",
-        "logo": {
-            "name": "Test image2.png",
-            "type": "image\/png",
-            "tmp_name": "C:\\wamp64\\tmp\\phpBA21.tmp",
-            "error": 0,
-            "size": 7431
-        },
-        "email": "testing3@gmail.com",
-        "phoneNumber": "22233344"
-    },
-    {
-        "idCompany": 4,
-        "name": "test4",
-        "yearFoundantion": "2015",
-        "description": "test4",
-        "city": "cityTest",
-        "logo": {
-            "name": "Test image2.png",
-            "type": "image\/png",
-            "tmp_name": "C:\\wamp64\\tmp\\phpBA21.tmp",
-            "error": 0,
-            "size": 7431
-        },
-        "email": "test4@gmail.com",
         "phoneNumber": "22233344"
     }
 ]
