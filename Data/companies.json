@@ -22,8 +22,17 @@
         "yearFoundation": "2005",
         "city": "Miami",
         "description": "Un pirulo, es un pirulo claramente",
-        "logo": "",
+        "logo": null,
         "email": "pirulo@gmail.com",
         "phoneNumber": "+5422222222"
+    },
+    {
+        "name": "Dolores",
+        "yearFoundation": "2423",
+        "city": "chicago",
+        "description": "hodogjdigsdgrefrgr",
+        "logo": "",
+        "email": "dolobruzzone@gmail.com",
+        "phoneNumber": "2425325463"
     }
 ]

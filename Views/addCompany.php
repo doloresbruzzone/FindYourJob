@@ -21,9 +21,9 @@
                                  <label for="">Email</label>
                                  <input type="email" name="email" required>
                                  <label for="">Phone Number</label>
-                                 <input type="text" name="phoneNumber" required>
+                                 <input type="text" name="phone" required>
                                  <label for="">Photo</label>
-                                 <input type="file" name ="photo" value ="<?php/* echo IMGCOOL_PATH.$product->getPhoto();*/?>"> 
+                                 <input type="file" name ="logo" value ="<?php/* echo IMGCOOL_PATH.$product->getPhoto();*/?>"> 
                               </div>
                          </div>
 
@@ -33,31 +33,3 @@
           </div>
      </section>
 </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
