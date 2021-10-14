@@ -3,13 +3,16 @@
 
     use Models\Person as Person;
     use Models\Student as Student;
+    use Controllers\CompanyController as CompanyController;
     
     class HomeController
     {
         private $studentController;
+        private $companyController;
 
         public function __construct(){
             $this->studentController = new StudentController();
+            $this->companyController = new CompanyController();
         }
 
         public function Index($message = "")
@@ -32,12 +35,12 @@
                 $admin->setIsAdmin(true);
                 $_SESSION['admin'] = $admin;
 
-                require_once(VIEWS_PATH."company-management.php"); //despues habria que cambiarlo a admin-home.php
+                $this->companyController->ShowListViewStudent("Belcome Admin");
             }
             else if($studentController->existsByEmail($student)){
                 $_SESSION['student'] = $student;
 
-                require_once(VIEWS_PATH."list-companies-std.php"); //despues habria que cambiarlo a student-home.php
+                require_once(VIEWS_PATH."home-student.php"); //despues habria que cambiarlo a student-home.php
             }
             else{
                 $this->Index("Error: el usuario no se encuentra en el sistema.");

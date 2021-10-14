@@ -1,38 +1,62 @@
-<main class="d-flex align-items-center justify-content-center height-100">
-     <div class="container">
-        <header class="text-center">
-            <h2>Add Company</h2>
-        </header>
-        
-        <form method="POST" action=<?php echo FRONT_ROOT."Company/AddCompany"?> method="post">
-            <div class="form-group">
-                <form>
-                    <div class="form-group">
-                        <label for="">Year Foundation</label>
-                        <input type="number" name="yearFoundation" required>
-                    </div>
+<?php
+    require_once('nav.php');
+?>
+<main class="py-5">
+     <section id="listado" class="mb-5">
+          <div class="container">
+          <h4 style="color:royalblue"><p><?php if(isset($message)){ echo $message; }?></p></h4>
+               <h2 class="mb-4">Add Company</h2>
+               <form action="<?php echo FRONT_ROOT."Company/AddCompany";?>" method="post" class="bg-light-alpha p-5">
+                    <div class="row">
+                         <div class="col-lg-3">
+                              <div class="form-group">
+                                 <label for="">Name</label>
+                                 <input type="text" name="name" required>
+                                 <label for="">Year Foundation</label>
+                                 <input type="number" name="yearFoundation" min="0" required>
+                                 <label for="">City</label>
+                                 <input type="text" name="city" required>
+                                 <label for="">Description</label>
+                                 <input type="text" name="description" minlength="10" maxlength="1000" required>
+                                 <label for="">Email</label>
+                                 <input type="email" name="email" required>
+                                 <label for="">Phone Number</label>
+                                 <input type="text" name="phoneNumber" required>
+                                 <input type="file" name ="photo" value ="<?php/* echo IMGCOOL_PATH.$product->getPhoto();*/?>"> 
+                              </div>
+                         </div>
 
-                    <div class="form-group">
-                        <label for="">City</label>
-                        <input type="text" name="city" required>
                     </div>
-
-                    <div class="form-group">
-                        <label for="">Description</label>
-                        <input type="text" name="description" minlength="100" maxlength="1000" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Email</label>
-                        <input type="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Phone Number</label>
-                        <input type="number" name="phoneNumber" required>
-                    </div>
-                    <button type="submit" name="add">Add</button>
-            </form>                      
-        
-    </div>
+                    <button type="submit"  class="btn btn-dark ml-auto d-block">Agregar</button>
+               </form>
+          </div>
+     </section>
 </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,39 +15,24 @@ class CompanyController
         $this->companyDAO = new CompanyDAO();
     }
 
-    public function ShowCompany ($nameCompany, $email)
-    {
-        Utils:: checkAdminSession();
-        $company = $this->companyDAO->GetCompany($nameCompany, $email);
-        if (isset($adminLoggedIn)) 
-        {
-            require_once(VIEWS_PATH."admin-company-show.php");
-        }else
-        {
-            require_once(VIEWS_PATH."student-company-show.php");
-        }
-    }
-
-    public function ShowListViewAdmin()
-    {
-        Utils::checkAdminSession();
-        $companies = $this->companyDAO->GetAll();
-        require_once(VIEWS_PATH."company-management.php");
-    }
-
-    public function ShowListViewStudent()
+    public function ShowListViewStudent($message = "")
     {
         Utils::checkStudentSession();
         $companies = $this->companyDAO->GetAll();
         require_once(VIEWS_PATH."list-companies-std.php");
     }
 
+    function ShowViewsAdd($message = ""){
+        Utils::checkAdminSession();
+        require_once(VIEWS_PATH."addCompany.php");
+    }
+
     public function AddCompany($companyName, $yearFoundation, $city, $description, $email, $phoneNumber, $logo)
     {
         Utils::checkAdminSession();
 
-        if ($this->companyDAO->GetCompany($companyName, $email)== NULL) 
-        {
+      /*  if ($this->companyDAO->GetCompany($companyName, $email)== NULL) 
+        {*/
             $newCompany = new Company();
             $newCompany->setName($companyName);
             $newCompany->setYearFoundation($yearFoundation);
@@ -56,10 +41,31 @@ class CompanyController
             $newCompany->setEmail($email);
             $newCompany->setPhoneNumber($phoneNumber);
             $newCompany->setLogo($logo);
-        } 
+
+
+            $this->companyDAO->Add($newCompany);
+
+            $this->ShowListViewStudent("Company add ");
+       /* } 
         else {
             require_once(VIEWS_PATH . "addCompany.php");
 
+        }*/
+    }
+
+
+    public function DeleteCompany($companyName, $email){
+        Utils::checkAdminSession();
+
+        $removed = $this->companyDAO->RemoveCompany($companyName, $email);
+        
+        if($removed == 1){
+            //agregar para que muestre mensaje de exito
+            $this->ShowListViewStudent(" Company Delete");
+        }
+        else{ 
+            //agregar para que muestre mensaje de error
+            $this->ShowListViewStudent("error al eliminar ");
         }
     }
 
@@ -81,31 +87,25 @@ class CompanyController
         $this->ShowListViewAdmin();
     }
 
-    function ShowViewsAdd(){
-        Utils::checkAdminSession();
-        require_once(VIEWS_PATH."addCompany.php");
-    }
 
-    public function DeleteCompany($companyName, $email){
-        Utils::checkAdminSession();
-
-        $removed = $this->companyDAO->RemoveCompany($companyName, $email);
-        
-        if($removed == 1){
-            //agregar para que muestre mensaje de exito
-            $this->ShowListViewAdmin();
-        }
-        else{ 
-            //agregar para que muestre mensaje de error
-            $this->ShowListViewAdmin();
+    public function ShowCompany ($nameCompany, $email)
+    {
+        Utils:: checkAdminSession();
+        $company = $this->companyDAO->GetCompany($nameCompany, $email);
+        if (isset($adminLoggedIn)) 
+        {
+            require_once(VIEWS_PATH."admin-company-show.php");
+        }else
+        {
+            require_once(VIEWS_PATH."student-company-show.php");
         }
     }
 
-    public function LogOut(){
-        Utils::logout();
+    public function ShowListViewAdmin($message = "")
+    {
+        Utils::checkAdminSession();
+        $companies = $this->companyDAO->GetAll();
+        require_once(VIEWS_PATH."company-management.php");
     }
-
-
-
 
 }
