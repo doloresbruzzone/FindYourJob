@@ -40,7 +40,7 @@
             else if($studentController->existsByEmail($student)){
                 $_SESSION['student'] = $student;
 
-                $this->companyController->ShowListViewStudent("Welcome!"); //despues habria que cambiarlo a student-home.php
+                $this->companyController->ShowListViewStudent("Welcome!"); 
             }
             else{
                 $this->Index("Error: el usuario no se encuentra en el sistema.");

@@ -13,7 +13,7 @@
                                  <label for="">Name</label>
                                  <input type="text" name="name" required>
                                  <label for="">Year Foundation</label>
-                                 <input type="number" name="yearFoundation" min="0" required>
+                                 <input type="number" name="year" min="0" required>
                                  <label for="">City</label>
                                  <input type="text" name="city" required>
                                  <label for="">Description</label>
@@ -22,12 +22,13 @@
                                  <input type="email" name="email" required>
                                  <label for="">Phone Number</label>
                                  <input type="text" name="phoneNumber" required>
+                                 <label for="">Photo</label>
                                  <input type="file" name ="photo" value ="<?php/* echo IMGCOOL_PATH.$product->getPhoto();*/?>"> 
                               </div>
                          </div>
 
                     </div>
-                    <button type="submit"  class="btn btn-dark ml-auto d-block">Agregar</button>
+                    <button type="submit"  class="btn btn-dark ml-auto d-block">Add</button>
                </form>
           </div>
      </section>

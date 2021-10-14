@@ -1,49 +1,29 @@
 [
     {
-        "name": "company1",
-        "yearFoundation": "2015",
-        "city": "cityTest",
-        "description": "Test1",
-        "logo": {
-            "name": "Test image.png"
-        },
-        "email": "test1@gmail.com",
-        "phoneNumber": "22334455"
+        "name": "CocaCola",
+        "yearFoundation": "1999",
+        "city": "NY",
+        "description": "Una bebida adictiva",
+        "logo": null,
+        "email": "cocacola@gmail.com",
+        "phoneNumber": "+549111111111"
     },
     {
-        "name": "Company2",
-        "yearFoundation": "2015",
-        "city": "cityTest",
-        "description": "test2",
-        "logo": {
-            "name": "Test image2.png"
-        },
-        "email": "test2@gmail.com",
-        "phoneNumber": "22233344"
+        "name": "Pirulo",
+        "yearFoundation": "2005",
+        "city": "Miami",
+        "description": "Un pirulo, es un pirulo claramente",
+        "logo": null,
+        "email": "pirulo@gmail.com",
+        "phoneNumber": "+5422222222"
     },
     {
-        "name": "Tercera Compañia",
-        "yearFoundation": "2016",
-        "city": "Mar del Plata",
-        "description": "Es una ciudad linda ",
-        "logo": {
-            "name": "test.png"
-        },
-        "email": "test2@gmail.com",
-        "phoneNumber": "33333333"
-    },
-    {
-        "name": "Cuarta Compañia",
-        "yearFoundation": "2016",
-        "city": "Mar del Plata",
-        "description": "Es una ciudad linda ",
-        "logo": {
-            "name": "test.png"
-        },
-        "email": "test2@gmail.com",
-        "phoneNumber": "44444"
+        "name": "Pirulo",
+        "yearFoundation": "2005",
+        "city": "Miami",
+        "description": "Un pirulo, es un pirulo claramente",
+        "logo": "",
+        "email": "pirulo@gmail.com",
+        "phoneNumber": "+5422222222"
     }
-
-
-
 ]

@@ -22,36 +22,39 @@ class CompanyController
         require_once(VIEWS_PATH."list-companies-std.php");
     }
 
-    function ShowViewAddNewCompany($message = ""){
+    function ViewAddCompany($message = ""){
         Utils::checkAdminSession();
         require_once(VIEWS_PATH."addCompany.php");
     }
 
-    public function AddCompany($companyName, $yearFoundation, $city, $description, $email, $phoneNumber, $logo)
+
+
+
+
+
+    public function AddCompany($name,$year,$city,$description,$email,$phone,$logo)
     {
         Utils::checkAdminSession();
 
-      /*  if ($this->companyDAO->GetCompany($companyName, $email)== NULL) 
-        {*/
-            $newCompany = new Company();
-            $newCompany->setName($companyName);
-            $newCompany->setYearFoundation($yearFoundation);
+        $newCompany = new Company();
+            $newCompany->setName($name);
+            $newCompany->setYearFoundation($year);
             $newCompany->setCity($city);
             $newCompany->setDescription($description);
             $newCompany->setEmail($email);
-            $newCompany->setPhoneNumber($phoneNumber);
+            $newCompany->setPhoneNumber($phone);
             $newCompany->setLogo($logo);
-
 
             $this->companyDAO->Add($newCompany);
 
-            $this->ShowListViewStudent("Company add ");
-       /* } 
-        else {
-            require_once(VIEWS_PATH . "addCompany.php");
-
-        }*/
+            $this->ViewAddCompany("Company added");
     }
+
+
+
+
+
+
 
 
     public function DeleteCompany($companyName, $email){
