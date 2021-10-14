@@ -3,9 +3,11 @@
 /// Aca tiene que ir el session
     Utils::checkStudentSession();
 ?>
-<center>
+
     
 <h1> Home Student </h1>
+
+<center>
 
     <a class="nav-link" href="list-companies-std.php">Company List</a>
     <a class="nav-link" href="list-form.php">Consulta Propuestas Laborales</a>

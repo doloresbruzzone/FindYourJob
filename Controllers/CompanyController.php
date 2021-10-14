@@ -101,5 +101,11 @@ class CompanyController
         }
     }
 
+    public function LogOut(){
+        Utils::logout();
+    }
+
+
+
 
 }
