@@ -20,5 +20,18 @@
         },
         "email": "test2@gmail.com",
         "phoneNumber": "22233344"
+    },
+    {
+        "name": "Tercera Compañia",
+        "yearFoundation": "2016",
+        "city": "Mar del Plata",
+        "description": "Es una ciudad linda ",
+        "logo": {
+            "name": "test.png"
+        },
+        "email": "test2@gmail.com",
+        "phoneNumber": "33333333"
     }
+
+
 ]
