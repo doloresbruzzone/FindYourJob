@@ -17,7 +17,7 @@
                     <th>Modify</th> 
                     </thead>
                     <tbody>  
-                   <form action=<?php echo FRONT_ROOT.'Company/ModifyCompany'?> method ="put">  
+                   <form action=<?php echo FRONT_ROOT.'Company/ModifyCompany'?> method ="put">
                    <?php if(!empty($companies)){ 
                   foreach($companies as $company){ ?>
                       <tr>
@@ -29,7 +29,6 @@
                         <td><?php echo $company->getPhoneNumber(); ?></td>
                         <td><?php echo $company->getLogo(); ?></td> 
                         <td><button type="submit" name="modify" class="btn btn-danger" value="">Modify</button></td>
-                        
                               </tr>
                              <?php }
                           }?>

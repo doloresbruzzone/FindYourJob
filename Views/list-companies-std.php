@@ -25,41 +25,20 @@
                    <?php if(!empty($companies)){ 
                     foreach($companies as $company){ ?>
                     
-                      <tr>
-                        <td><?php echo $company->getName(); ?></td>
-                        <td>
+                    <tr>
+                         <td><?php echo $company->getName(); ?></td>
+                         <td><?php echo $company->getYearFoundation(); ?></td>
+                         <td><?php echo $company->getCity(); ?></td>
+                         <td><?php echo $company->getDescription(); ?></td>
+                         <td><?php echo $company->getEmail(); ?></td>
+                         <td><?php echo $company->getPhoneNumber(); ?></td>
+                         <td><?php echo $company->getLogo(); ?></td> 
                          <!-- Button trigger modal -->
+                         <td>
                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                          Company Info
                          </button>
-
-                         <!-- Modal -->
-                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                         <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                   <div class="modal-header">
-                                   <h5 class="modal-title" id="exampleModalLabel"><?php echo $company->getName(); ?></h5>
-                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                   </button>
-                                   </div>
-                                   <div class="modal-body">
-                                        <td><?php echo $company->getYearFoundation(); ?></td>
-                                        <td><?php echo $company->getCity(); ?></td>
-                                        <td><?php echo $company->getDescription(); ?></td>
-                                        <td><?php echo $company->getEmail(); ?></td>
-                                        <td><?php echo $company->getPhoneNumber(); ?></td>
-                                        <td><?php echo $company->getLogo(); ?></td> 
-                                   </div>
-                                   <div class="modal-footer">
-                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                   </div>
-                              </div>
-                              </div>
-                              </div>
-                              </td>
-                              </tr>
-                              
+                    </td>
                              <?php }
                           }?>
                           </form>    
