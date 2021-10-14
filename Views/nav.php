@@ -14,12 +14,6 @@
           <li class="nav-item">
           <a class="nav-link" href="<?php echo FRONT_ROOT ?>Company/LogOut">Logout</a>
           </li> 
-          <li class="nav-item">
-          <a class="nav-link" href="<?php echo FRONT_ROOT ?>Company/LogOut">2</a>
-          </li> 
-          <li class="nav-item">
-          <a class="nav-link" href="<?php echo FRONT_ROOT ?>Company/LogOut">3</a>
-          </li> 
 
           <?php } ?>   
           

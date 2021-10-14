@@ -16,7 +16,8 @@
                     <th>Description</th>
                     <th>Email</th>
                     <th>Phone Number</th>
-                    <th>Logo</th>   
+                    <th>Logo</th> 
+                    <th>Company info</th>  
                     </thead>
                     <tbody>  
                     
@@ -26,13 +27,7 @@
                     
                       <tr>
                         <td><?php echo $company->getName(); ?></td>
-                        <td><?php echo $company->getYearFoundation(); ?></td>
-                         <td><?php echo $company->getCity(); ?></td>
-                         <td><?php echo $company->getDescription(); ?></td>
-                         <td><?php echo $company->getEmail(); ?></td>
-                         <td><?php echo $company->getPhoneNumber(); ?></td>
-                         <td><?php echo $company->getLogo(); ?></td> 
-                        <button type="submit" name="remover" class="btn btn-danger" value="">Company Info</button>
+                        <td>
                          <!-- Button trigger modal -->
                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                          Company Info
@@ -62,8 +57,9 @@
                               </div>
                               </div>
                               </div>
-                        </td>
+                              </td>
                               </tr>
+                              
                              <?php }
                           }?>
                           </form>    

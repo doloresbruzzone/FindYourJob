@@ -108,4 +108,9 @@ class CompanyController
         require_once(VIEWS_PATH."company-management.php");
     }
 
+    public function LogOut(){
+        Utils::logout();
+    }
+
+
 }
