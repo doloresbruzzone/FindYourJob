@@ -32,12 +32,12 @@
                 $admin->setIsAdmin(true);
                 $_SESSION['admin'] = $admin;
 
-                require_once(VIEWS_PATH."list-companies-std.php"); //despues habria que cambiarlo a admin-home.php
+                require_once(VIEWS_PATH."company-management.php"); //despues habria que cambiarlo a admin-home.php
             }
             else if($studentController->existsByEmail($student)){
                 $_SESSION['student'] = $student;
 
-                require_once(VIEWS_PATH."home-student.php"); //despues habria que cambiarlo a student-home.php
+                require_once(VIEWS_PATH."list-companies-std.php"); //despues habria que cambiarlo a student-home.php
             }
             else{
                 $this->Index("Error: el usuario no se encuentra en el sistema.");

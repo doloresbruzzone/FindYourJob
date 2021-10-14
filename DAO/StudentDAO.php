@@ -20,7 +20,7 @@
             $this->studentList = array();
 
             $apiStudent = curl_init(API_URL.'Student');
-            echo $apiStudent;
+            
             curl_setopt($apiStudent, CURLOPT_HTTPHEADER, array(API_KEY));
             curl_setopt($apiStudent, CURLOPT_RETURNTRANSFER, true);
 
