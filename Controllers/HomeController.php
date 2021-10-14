@@ -35,7 +35,7 @@
                 $admin->setIsAdmin(true);
                 $_SESSION['admin'] = $admin;
 
-                $this->companyController->ShowListViewStudent("Belcome Admin");
+                $this->companyController->ShowListViewAdmin("Welcome Admin");
             }
             else if($studentController->existsByEmail($student)){
                 $_SESSION['student'] = $student;
