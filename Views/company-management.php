@@ -13,7 +13,8 @@
                     <th>Description</th>
                     <th>Email</th>
                     <th>Phone Number</th>
-                    <th>Logo</th>   
+                    <th>Logo</th>  
+                    <th>Modify</th> 
                     </thead>
                     <tbody>  
                    <form action=<?php echo FRONT_ROOT.'Company/ModifyCompany'?> method ="put">  
@@ -27,8 +28,8 @@
                         <td><?php echo $company->getEmail(); ?></td>
                         <td><?php echo $company->getPhoneNumber(); ?></td>
                         <td><?php echo $company->getLogo(); ?></td> 
-                        <button type="submit" name="modify" class="btn btn-danger" value="">Modify</button>
-                        </td>
+                        <td><button type="submit" name="modify" class="btn btn-danger" value="">Modify</button></td>
+                        
                               </tr>
                              <?php }
                           }?>
@@ -38,7 +39,6 @@
           </div>
      </section>
 </main>
-
     
 <main class="py-5">  
 <div class="container">
