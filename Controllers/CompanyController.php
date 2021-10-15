@@ -27,6 +27,14 @@ class CompanyController
         require_once(VIEWS_PATH."addCompany.php");
     }
 
+    public function ShowModifyCompany($nameCompany , $email)
+    {
+
+       $company =  $this->companyDAO->GetCompany($nameCompany , $email);
+
+        require_once(VIEWS_PATH."modifyCompany.php");
+    }
+
     public function AddCompany($name,$year,$city,$description,$email,$phone,$logo)
     {
         Utils::checkAdminSession();
@@ -52,31 +60,22 @@ class CompanyController
         $removed = $this->companyDAO->RemoveCompany($name, $email);
         
         if($removed == 1){
-            //agregar para que muestre mensaje de exito
+         
             $this->ShowListViewAdmin("Company deleted");
         }
         else{ 
-            //agregar para que muestre mensaje de error
+          
             $this->ShowListViewAdmin("error");
         }
     }
 
-    public function ModifyCompany($companyName, $yearFoundation, $city, $description, $email, $phoneNumber, $logo)
+    public function ModifyCompany($name, $year, $city, $description, $email, $phone, $logo, $nameCompany , $emailCompany)
     {
         Utils::checkAdminSession();
-        $company = $this->companyDAO->GetCompany($companyName, $email);
 
-        $company->setName($companyName);
-        $company->setYearFoundantion($yearFoundation);
-        $company->setCity($city);
-        $company->setDescription($description);
-        $company->setEmail($email);
-        $company->setPhoneNumber($phoneNumber);
-        $company->setLogo($logo);
-        
-        $this->companyDAO->modifyCompany($company);
+        $this->companyDAO->modifyCompany($name, $year, $city, $description, $email, $phone, $logo,$nameCompany , $emailCompany);
 
-        $this->ShowListViewAdmin();
+        $this->ShowListViewAdmin("Company Modify");
     }
 
 

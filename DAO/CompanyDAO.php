@@ -59,8 +59,10 @@
                 $company->setYearFoundation($valuesArray["yearFoundation"]);
                 $company->setCity($valuesArray["city"]);
                 $company->setDescription($valuesArray["description"]);
+                $company->setLogo($valuesArray["logo"]);
                 $company->setEmail($valuesArray["email"]);
                 $company->setPhoneNumber($valuesArray["phoneNumber"]);
+                
 
                 array_push($this->companyList, $company);
             }
@@ -108,19 +110,32 @@
             return $jsonFilePath;
         }
 
-        public function ModifyCompany (Company $modifiedCompany) {
 
+        public function ModifyCompany($name, $year, $city, $description, $email, $phone, $logo,$nameCompany , $emailCompany){
             $this->RetrieveData();
+            $newList = array();
+            foreach ($this->companyList as $company){
+                if(($company->getName() != $nameCompany) && ($company->getEmail() != $emailCompany) ){
+                    array_push($newList,$company);
+    
+               }else{
+                $company->setName($name);
+                $company->setYearFoundation($year);
+                $company->setCity($city);
+                $company->setDescription($description);
+                $company->setEmail($email);
+                $company->setPhoneNumber($phone);
+                $company->setLogo($logo);
 
-            foreach ($this->companyList as $company) {
-                if ($company->getName() == $modifiedCompany->getName ()) {
-                    $company = $modifiedCompany;
-                }
-            }
-            $this->SaveData;
-        }
-
-        //No sería mejor usar un numero de empresa?
+                array_push($newList,$company);
+                    }
+    
+              } 
+              $this->companyList = $newList;
+             $this->SaveData(); 
+    
+           }
+       
 
     }
 

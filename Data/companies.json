@@ -1,32 +1,29 @@
 [
     {
-        "name": "CocaCola",
-        "yearFoundation": "1999",
-        "city": "NY",
-        "description": "Una bebida adictiva",
-        "logo": null,
-        "email": "cocacola@gmail.com",
-        "phoneNumber": "+549111111111"
-<<<<<<< HEAD
-    },
-    {
-        "name": "Pirulo",
-        "yearFoundation": "2005",
-        "city": "Miami",
-        "description": "Un pirulo, es un pirulo claramente",
-        "logo": null,
-        "email": "pirulo@gmail.com",
-        "phoneNumber": "+5422222222"
-    },
-    {
-        "name": "Internet",
-        "yearFoundation": "1986",
-        "city": "Mundo",
-        "description": "Lo mas lindo del mundo, sin dudas",
+        "name": "HOLA ",
+        "yearFoundation": "0",
+        "city": "buenos aires",
+        "description": "hola mundo",
         "logo": "",
-        "email": "internet@gmail.com",
-        "phoneNumber": "+549333333"
-=======
->>>>>>> 68f32f71d232bcbbd8ecf1212a980cd212b27502
+        "email": "hhh@gmail.com",
+        "phoneNumber": "0223 4483445"
+    },
+    {
+        "name": "Cosme ",
+        "yearFoundation": "2",
+        "city": "MAR DEL PLATA",
+        "description": "ngfm",
+        "logo": "",
+        "email": "user@myapp.com",
+        "phoneNumber": "0223 4486111"
+    },
+    {
+        "name": "beer house",
+        "yearFoundation": "2",
+        "city": "MAR DEL PLATA",
+        "description": "roma",
+        "logo": "",
+        "email": "navarroEze@gmail.com",
+        "phoneNumber": "0223 4486111"
     }
 ]

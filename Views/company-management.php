@@ -18,7 +18,7 @@
                     <th>Modify</th> 
                     </thead>
                     <tbody>  
-                   <form action=<?php echo FRONT_ROOT.'Company/ModifyCompany'?> method ="put">
+                   <form action="" method ="get">
                    <?php if(!empty($companies)){ 
                   foreach($companies as $company){ ?>
                       <tr>
@@ -29,7 +29,7 @@
                         <td><?php echo $company->getEmail(); ?></td>
                         <td><?php echo $company->getPhoneNumber(); ?></td>
                         <td><?php echo $company->getLogo(); ?></td> 
-                        <td><button type="submit" name="modify" class="btn btn-danger" value="">Modify</button></td>
+                        <td><button class="btn btn-danger" ><a href="<?php echo FRONT_ROOT."Company/ShowModifyCompany?nameCompany=".$company->getName()."&email=".$company->getEmail();?>" >Modify</a></button></td> 
                               </tr>
                              <?php }
                           }?>
@@ -66,7 +66,7 @@
             </tbody>
             </tr>
           </table>
-          <form>
+         </form>
       </div>
     </main>
 
