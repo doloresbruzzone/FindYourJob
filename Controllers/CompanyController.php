@@ -103,5 +103,26 @@ class CompanyController
         Utils::logout();
     }
 
+    public function FilterCompanies($search)
+    {
+
+        $search = strtolower($search);
+        $filteredCompanies = array();
+        foreach ($this->companyDAO->getAll() as $company) 
+        {
+            $companyName = strtolower($company->getName());
+
+            if (Utils::completeSearch($companyName, $search)) 
+            {
+                 array_push($filteredCompanies, $company);
+            }
+            /*else
+            {
+                $this->ShowListViewStudent ("La Empresa no se encuentra registrada");
+            }*/
+        }
+        $companies = $filteredCompanies;
+        require_once(VIEWS_PATH . "list-companies-std.php");
+    }
 
 }
