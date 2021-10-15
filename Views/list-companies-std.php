@@ -33,9 +33,10 @@
                          <td><?php echo $company->getPhoneNumber(); ?></td>
                          <td><?php echo $company->getLogo(); ?></td> 
                          <!-- Button trigger modal -->
+                         <td><a href="<?php echo FRONT_ROOT."Company/ShowCompany/?nameCompany=".$company->getName()."&email=".$company->getEmail();?>" >Ver</a></td>
                          <td>
                          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
-                         +
+                         
                          </button>
 
                          <div class="modal" tabindex="-1" role="dialog">
@@ -82,6 +83,9 @@
                     <form action="<?php echo FRONT_ROOT ?>Company/FilterCompanies" method="POST" enctype="multipart/form-data">
                     <input type="text" name="search" class="form-control form-control-ml" placeholder="Company Name"  required>
                     <button type="submit"  class="btn btn-dark ml-auto d-block" >Buscar</button>
+                    
+                              
+                    
             </form>
                </table>
           </div>
