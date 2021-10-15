@@ -1,38 +1,92 @@
 [
     {
-        "name": "HOLA ",
-        "yearFoundation": "0",
-        "city": "buenos aires",
-        "description": "hola mundo",
+        "name": "Disney XD",
+        "yearFoundation": "2009",
+        "city": "Miami",
+        "description": "Entretenimiento",
         "logo": "",
-        "email": "hhh@gmail.com",
-        "phoneNumber": "0223 4483445"
+        "email": "disney@disney.com",
+        "phoneNumber": "+93345123"
     },
     {
-        "name": "Cosme ",
-        "yearFoundation": "2",
-        "city": "MAR DEL PLATA",
-        "description": "ngfm",
+        "name": "Ecosia",
+        "yearFoundation": "2009",
+        "city": "Guadarajada",
+        "description": "Empresa dedicada al cuidado del ecosistema",
         "logo": "",
-        "email": "user@myapp.com",
-        "phoneNumber": "0223 4486111"
+        "email": "ecosia@ecosia.com",
+        "phoneNumber": "+963459523"
     },
     {
-        "name": "beer house",
-        "yearFoundation": "2",
-        "city": "MAR DEL PLATA",
-        "description": "roma",
+        "name": "PedidosYa",
+        "yearFoundation": "2009",
+        "city": "Buenos Aires",
+        "description": "Empresa dedicada a la distribucion de productos",
         "logo": "",
-        "email": "navarroEze@gmail.com",
-        "phoneNumber": "0223 4486111"
+        "email": "pedidos@ya.com",
+        "phoneNumber": "+549234543"
     },
     {
-        "name": "Holanda",
-        "yearFoundation": "13",
-        "city": "Caril\u00f3",
-        "description": "color azul",
+        "name": "Mysl",
+        "yearFoundation": "1930",
+        "city": "London",
+        "description": "Desarrollo de Software",
         "logo": "",
-        "email": "cristian_perez_andaur@hotmail.com",
-        "phoneNumber": "0223155022897"
+        "email": "mysl@sof.com",
+        "phoneNumber": "+893456432"
+    },
+    {
+        "name": "Gimson Corp",
+        "yearFoundation": "1930",
+        "city": "Brasilia",
+        "description": "Desconocemos a qu\u00e9 se dedica",
+        "logo": "",
+        "email": "corp@gimson.com",
+        "phoneNumber": "+32657325"
+    },
+    {
+        "name": "Mercado Libre",
+        "yearFoundation": "2007",
+        "city": "Capital Federal",
+        "description": "Distribucion de productos",
+        "logo": "",
+        "email": "Mercado@libre.com",
+        "phoneNumber": "+5492345402"
+    },
+    {
+        "name": "Mcdonald",
+        "yearFoundation": "1920",
+        "city": "Los Angeles",
+        "description": "Empresa gastronomica",
+        "logo": "",
+        "email": "mc@donald.com",
+        "phoneNumber": "+98323453"
+    },
+    {
+        "name": "Makro",
+        "yearFoundation": "2004",
+        "city": "Rosario",
+        "description": "Mayorista de alimentos",
+        "logo": "",
+        "email": "makro@makro.com",
+        "phoneNumber": "+36729405"
+    },
+    {
+        "name": "Daltona",
+        "yearFoundation": "1990",
+        "city": "Miramar",
+        "description": "Servicio automotor",
+        "logo": "",
+        "email": "daltona@gmail.com",
+        "phoneNumber": "+5492345313"
+    },
+    {
+        "name": "PelotaPlaya",
+        "yearFoundation": "1920",
+        "city": "California",
+        "description": "Realizacion de pelotas",
+        "logo": "",
+        "email": "pelota@playa.com",
+        "phoneNumber": "+96834052"
     }
 ]
