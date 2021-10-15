@@ -35,6 +35,20 @@ class CompanyController
         require_once(VIEWS_PATH."modifyCompany.php");
     }
 
+    public function ShowCompany ($nameCompany, $email)
+    {
+
+        $company = $this->companyDAO->GetCompany($nameCompany, $email);
+        //require_once(VIEWS_PATH."student-company-show.php");
+        if (isset($adminLoggedIn)) 
+        {
+            require_once(VIEWS_PATH."admin-company-show.php");
+        }else
+        {
+            require_once(VIEWS_PATH."student-company-show.php");
+        }
+    }
+
     public function AddCompany($name,$year,$city,$description,$email,$phone,$logo)
     {
         Utils::checkAdminSession();
@@ -78,19 +92,6 @@ class CompanyController
         $this->ShowListViewAdmin("Company Modify");
     }
 
-
-    public function ShowCompany ($nameCompany, $email)
-    {
-        Utils:: checkAdminSession();
-        $company = $this->companyDAO->GetCompany($nameCompany, $email);
-        if (isset($adminLoggedIn)) 
-        {
-            require_once(VIEWS_PATH."admin-company-show.php");
-        }else
-        {
-            require_once(VIEWS_PATH."student-company-show.php");
-        }
-    }
 
     public function ShowListViewAdmin($message = "")
     {
