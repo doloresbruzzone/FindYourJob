@@ -9,14 +9,14 @@
                <h2 class="mb-4">Companies List</h2>
                <table class="table bg-light-alpha">
                     <thead>
-                    <th>Name</th>
-                    <th>Foundation Year</th>
+                    <th>Company Name</th>
+
                     <th>City</th>
-                    <th>Description</th>
-                    <th>Email</th>
-                    <th>Phone Number</th>
-                    <th>Logo</th> 
-                    <th>Company info</th>  
+
+
+
+
+                    <th>+ info</th>  
                     </thead>
                     <tbody>  
                     
@@ -26,12 +26,9 @@
                     
                     <tr>
                          <td><?php echo $company->getName(); ?></td>
-                         <td><?php echo $company->getYearFoundation(); ?></td>
+
                          <td><?php echo $company->getCity(); ?></td>
-                         <td><?php echo $company->getDescription(); ?></td>
-                         <td><?php echo $company->getEmail(); ?></td>
-                         <td><?php echo $company->getPhoneNumber(); ?></td>
-                         <td><?php echo $company->getLogo(); ?></td> 
+
                          <!-- Button trigger modal -->
                          <td><a href="<?php echo FRONT_ROOT."Company/ShowCompany/?nameCompany=".$company->getName()."&email=".$company->getEmail();?>" >Ver</a></td>
                          <td>
