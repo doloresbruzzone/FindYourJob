@@ -34,7 +34,7 @@
                          <td><?php echo $company->getLogo(); ?></td> 
                          <!-- Button trigger modal -->
                          <td>
-                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                         <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
                          +
                          </button>
 
@@ -78,6 +78,11 @@
                           }?>
                           </form>    
                     </tbody>
+
+                    <form action="<?php echo FRONT_ROOT ?>Company/FilterCompanies" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="search" class="form-control form-control-ml" placeholder="Company Name"  required>
+                    <button type="submit"  class="btn btn-dark ml-auto d-block" >Buscar</button>
+            </form>
                </table>
           </div>
      </section>
