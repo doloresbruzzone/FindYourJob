@@ -89,7 +89,7 @@ class CompanyController
 
         $this->companyDAO->modifyCompany($name, $year, $city, $description, $email, $phone, $logo,$nameCompany , $emailCompany);
 
-        $this->ShowListViewAdmin("Company Modify");
+        $this->ShowListViewAdmin("Company modified");
     }
 
 

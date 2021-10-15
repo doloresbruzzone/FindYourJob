@@ -23,10 +23,8 @@
           <li class="nav-item">
                <a class="nav-link" href="<?php echo FRONT_ROOT ?>Company/LogOut">Logout</a>
           </li> 
-          <?php } ?>
-          
-
-
+          <?php } 
+          ?>
 
      </ul>
 </nav>

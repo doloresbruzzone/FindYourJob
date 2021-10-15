@@ -1,11 +1,92 @@
 [
     {
-        "name": "acenture",
-        "yearFoundation": "2",
+        "name": "Accenture",
+        "yearFoundation": "1999",
         "city": "MAR DEL PLATA",
         "description": "informatica",
-        "logo": "accenture.png",
+        "logo": "accenture-logo-1.png",
         "email": "acentauro@acen.com",
         "phoneNumber": "0223 4486111"
+    },
+    {
+        "name": "Disney ",
+        "yearFoundation": "2009",
+        "city": "Miami",
+        "description": "Entretenimiento",
+        "logo": "disney.jfif",
+        "email": "disney@disney.com",
+        "phoneNumber": "+93345123"
+    },
+    {
+        "name": "Ecosia",
+        "yearFoundation": "2009",
+        "city": "Guadarajada",
+        "description": "Empresa dedicada al cuidado del ecosistema",
+        "logo": "ecosia.png",
+        "email": "ecosia@ecosia.com",
+        "phoneNumber": "+963459523"
+    },
+    {
+        "name": "PedidosYa",
+        "yearFoundation": "2009",
+        "city": "Buenos Aires",
+        "description": "Empresa dedicada a la distribucion de productos",
+        "logo": "pedidosYa.jfif",
+        "email": "pedidos@ya.com",
+        "phoneNumber": "+549234543"
+    },
+    {
+        "name": "Gimson Corp",
+        "yearFoundation": "1930",
+        "city": "Brasilia",
+        "description": "Desconocemos a qu\u00e9 se dedica",
+        "logo": "GimsonCorp.jfif",
+        "email": "corp@gimson.com",
+        "phoneNumber": "+32657325"
+    },
+    {
+        "name": "Mercado Libre",
+        "yearFoundation": "2007",
+        "city": "Capital Federal",
+        "description": "Distribucion de productos",
+        "logo": "mercadoLibre.jfif",
+        "email": "Mercado@libre.com",
+        "phoneNumber": "+5492345402"
+    },
+    {
+        "name": "Mcdonald",
+        "yearFoundation": "1920",
+        "city": "Los Angeles",
+        "description": "Empresa gastronomica",
+        "logo": "mdDonalds.jfif",
+        "email": "mc@donald.com",
+        "phoneNumber": "+98323453"
+    },
+    {
+        "name": "Makro",
+        "yearFoundation": "2004",
+        "city": "Rosario",
+        "description": "Mayorista de alimentos",
+        "logo": "makro.jfif",
+        "email": "makro@makro.com",
+        "phoneNumber": "+36729405"
+    },
+    {
+        "name": "Daltona",
+        "yearFoundation": "1990",
+        "city": "Miramar",
+        "description": "Servicio automotor",
+        "logo": "daltona.jpg",
+        "email": "daltona@gmail.com",
+        "phoneNumber": "+5492345313"
+    },
+    {
+        "name": "PelotaPlaya",
+        "yearFoundation": "1920",
+        "city": "California",
+        "description": "Realizacion de pelotas",
+        "logo": "pelotaPlaya.jfif",
+        "email": "pelota@playa.com",
+        "phoneNumber": "+96834052"
     }
 ]

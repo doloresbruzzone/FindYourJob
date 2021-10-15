@@ -14,8 +14,11 @@
                          echo  "<h4> Description: " . $company->getDescription() . "</h4>";
                          echo  "<h4> Email: " . $company->getEmail() . "</h4>";
                          echo  "<h4> PhoneNumber: " . $company->getPhoneNumber() . "</h4>";
-                         }
-            ?>               
+                        ?> 
+                         <img src="<?php if(!empty($company->getLogo())) echo IMG_PATH.$company->getLogo();?>" alt="" width="90" height="60">
+                         <?php
+                    }
+               ?>               
           </div>
      </section>
 </main>
