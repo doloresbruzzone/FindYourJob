@@ -45,25 +45,19 @@ class CompanyController
             $this->ViewAddCompany("Company added");
     }
 
-
-
-
-
-
-
-
-    public function DeleteCompany($companyName, $email){
+    public function DeleteCompany($name, $email)
+    {
         Utils::checkAdminSession();
 
-        $removed = $this->companyDAO->RemoveCompany($companyName, $email);
+        $removed = $this->companyDAO->RemoveCompany($name, $email);
         
         if($removed == 1){
             //agregar para que muestre mensaje de exito
-            $this->ShowListViewStudent(" Company Delete");
+            $this->ShowListViewAdmin("Company deleted");
         }
         else{ 
             //agregar para que muestre mensaje de error
-            $this->ShowListViewStudent("error al eliminar ");
+            $this->ShowListViewAdmin("error");
         }
     }
 

@@ -7,6 +7,7 @@
         "logo": null,
         "email": "cocacola@gmail.com",
         "phoneNumber": "+549111111111"
+<<<<<<< HEAD
     },
     {
         "name": "Pirulo",
@@ -25,5 +26,7 @@
         "logo": "",
         "email": "internet@gmail.com",
         "phoneNumber": "+549333333"
+=======
+>>>>>>> 68f32f71d232bcbbd8ecf1212a980cd212b27502
     }
 ]
