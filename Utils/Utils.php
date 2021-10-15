@@ -20,6 +20,14 @@
             session_destroy();
             header("Location: ".FRONT_ROOT);
         }
+
+
+        public static function completeSearch(String $haystack, String $needle)
+        {
+            return $needle != '' && strncmp($haystack, $needle, strlen($needle)) == 0;
+        }
     }
+
+    
 
 ?>
