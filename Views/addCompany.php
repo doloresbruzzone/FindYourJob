@@ -23,7 +23,7 @@
                                  <label for="">Phone Number</label>
                                  <input type="text" name="phone" placeholder="Phone Number" required>
                                  <label for="">Photo</label>
-                                 <input type="file" name ="logo" value ="<?php/* echo IMGCOOL_PATH.$product->getPhoto();*/?>"> 
+                                 <input type="file" name ="logo" value =""> 
                               </div>
                          </div>
 

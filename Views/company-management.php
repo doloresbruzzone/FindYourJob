@@ -38,13 +38,10 @@
                </table>
           </div>
      </section>
-</main>
-    
-<main class="py-5">  
-<div class="container">
-<h3 class="mb-4">Remove Company</h3>
-        <form action="<?php echo FRONT_ROOT."Company/DeleteCompany" ?>" method="post">
-        <table  style="max-width: 35%;">
+     <div class="container">
+        <h3 class="mb-4">Remove Company</h3>
+          <form action="<?php echo FRONT_ROOT."Company/DeleteCompany" ?>" method="post">
+            <table  style="max-width: 35%;">
             <thead>
               <tr>
                 <th style="width: 100px;">Name</th>
@@ -68,5 +65,6 @@
           </table>
          </form>
       </div>
-    </main>
+</main>
+
 
