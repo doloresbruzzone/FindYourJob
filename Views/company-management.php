@@ -28,7 +28,7 @@
                         <td><?php echo $company->getDescription(); ?></td>
                         <td><?php echo $company->getEmail(); ?></td>
                         <td><?php echo $company->getPhoneNumber(); ?></td>
-                        <td><?php echo $company->getLogo(); ?></td> 
+                        <td> <img src="<?php if(!empty($company->getLogo())) echo IMG_PATH.$company->getLogo();?>" alt="" width="60" height="30"></td> 
                         <td><button class="btn btn-danger" ><a href="<?php echo FRONT_ROOT."Company/ShowModifyCompany?nameCompany=".$company->getName()."&email=".$company->getEmail();?>" >Modify</a></button></td> 
                               </tr>
                              <?php }
