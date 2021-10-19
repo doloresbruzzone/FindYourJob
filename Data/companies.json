@@ -1,10 +1,19 @@
 [
     {
-        "name": "Disney XD",
+        "name": "Accenture",
+        "yearFoundation": "1999",
+        "city": "MAR DEL PLATA",
+        "description": "informatica",
+        "logo": "accenture-logo-1.png",
+        "email": "acentauro@acen.com",
+        "phoneNumber": "0223 4486111"
+    },
+    {
+        "name": "Disney ",
         "yearFoundation": "2009",
         "city": "Miami",
         "description": "Entretenimiento",
-        "logo": "",
+        "logo": "disney.jfif",
         "email": "disney@disney.com",
         "phoneNumber": "+93345123"
     },
@@ -13,7 +22,7 @@
         "yearFoundation": "2009",
         "city": "Guadarajada",
         "description": "Empresa dedicada al cuidado del ecosistema",
-        "logo": "",
+        "logo": "ecosia.png",
         "email": "ecosia@ecosia.com",
         "phoneNumber": "+963459523"
     },
@@ -22,25 +31,16 @@
         "yearFoundation": "2009",
         "city": "Buenos Aires",
         "description": "Empresa dedicada a la distribucion de productos",
-        "logo": "",
+        "logo": "pedidosYa.jfif",
         "email": "pedidos@ya.com",
         "phoneNumber": "+549234543"
-    },
-    {
-        "name": "Mysl",
-        "yearFoundation": "1930",
-        "city": "London",
-        "description": "Desarrollo de Software",
-        "logo": "",
-        "email": "mysl@sof.com",
-        "phoneNumber": "+893456432"
     },
     {
         "name": "Gimson Corp",
         "yearFoundation": "1930",
         "city": "Brasilia",
         "description": "Desconocemos a qu\u00e9 se dedica",
-        "logo": "",
+        "logo": "GimsonCorp.jfif",
         "email": "corp@gimson.com",
         "phoneNumber": "+32657325"
     },
@@ -49,7 +49,7 @@
         "yearFoundation": "2007",
         "city": "Capital Federal",
         "description": "Distribucion de productos",
-        "logo": "",
+        "logo": "mercadoLibre.jfif",
         "email": "Mercado@libre.com",
         "phoneNumber": "+5492345402"
     },
@@ -58,7 +58,7 @@
         "yearFoundation": "1920",
         "city": "Los Angeles",
         "description": "Empresa gastronomica",
-        "logo": "",
+        "logo": "mdDonalds.jfif",
         "email": "mc@donald.com",
         "phoneNumber": "+98323453"
     },
@@ -67,7 +67,7 @@
         "yearFoundation": "2004",
         "city": "Rosario",
         "description": "Mayorista de alimentos",
-        "logo": "",
+        "logo": "makro.jfif",
         "email": "makro@makro.com",
         "phoneNumber": "+36729405"
     },
@@ -76,7 +76,7 @@
         "yearFoundation": "1990",
         "city": "Miramar",
         "description": "Servicio automotor",
-        "logo": "",
+        "logo": "daltona.jpg",
         "email": "daltona@gmail.com",
         "phoneNumber": "+5492345313"
     },
@@ -85,7 +85,7 @@
         "yearFoundation": "1920",
         "city": "California",
         "description": "Realizacion de pelotas",
-        "logo": "",
+        "logo": "pelotaPlaya.jfif",
         "email": "pelota@playa.com",
         "phoneNumber": "+96834052"
     }
