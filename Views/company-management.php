@@ -39,7 +39,7 @@
           </div>
      </section>
 </main>
-    
+
 <main class="py-5">  
 <div class="container">
 <h3 class="mb-4">Remove Company</h3>
@@ -54,13 +54,14 @@
             <tbody align=center>
               <tr>
                 <td>
-                  <input type="text" name="name" style="height: 40px;" min="0" placeholder="company name">  
+                  <input type="text" name="name" style="height: 40px;"  placeholder="company name" required>  
                 </td>
                 <td>
-                    <input type="email" name="email" style="height: 40px;" min="0" placeholder="company email">
+                    <input type="email" name="email" style="height: 40px;" placeholder="company email" required>
                 </td>
+
                 <td>
-                  <button type="submit" class="btn" value="">Remove</button>
+                  <button type="submit" class="btn" value="">Delete</button>
                 </td>
               </tr>
             </tbody>
