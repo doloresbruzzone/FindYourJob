@@ -46,19 +46,6 @@
                 array_push($this->studentList, $student);  
             } 
         }
-
-        /*public function GetCompany($companyName)
-        {
-            $this->RetrieveData();
-            $companyExists = null;
-
-            foreach($this->companyList as $company) {
-                if($company->getName() == $companyName) {
-                    $companyExists = $company;
-                }
-            }
-            return $companyExists;
-        }*/
  
         public function GetByStudentDni($studentDni)
         {
