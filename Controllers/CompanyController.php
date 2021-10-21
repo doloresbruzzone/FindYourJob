@@ -48,7 +48,11 @@ class CompanyController
             require_once(VIEWS_PATH."student-company-show.php");
         }
     }
-
+    public function RedirectAddForm()
+    {
+        Utils::checkAdminSession();
+        require_once(VIEWS_PATH . "addCompany.php");
+    }
     public function AddCompany($name,$year,$city,$description,$email,$phone,$logo)
     {
         Utils::checkAdminSession();
