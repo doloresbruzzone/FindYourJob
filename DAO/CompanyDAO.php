@@ -3,10 +3,12 @@
 
     use Models\Company as Company;
     use DAO\ICompanyDAO as ICompanyDAO;
+    use DAO\Connection as Connection;
 
     class CompanyDAO implements ICompanyDAO{
 
         private $companyList = array();
+        private $connection;
 
         public function Add(Company $company) {
             $this->RetrieveData();
@@ -134,6 +136,11 @@
               $this->companyList = $newList;
              $this->SaveData(); 
     
+           }
+        
+           public function GetInstance(){
+            $this->connection = Connection::getInstance();
+            return $this->connection;
            }
        
 

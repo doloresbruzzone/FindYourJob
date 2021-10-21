@@ -130,4 +130,9 @@ class CompanyController
         require_once(VIEWS_PATH . "list-companies-std.php");
     }
 
+    public function getConection(){
+        $connection = $this->companyDAO->getConection();
+    }
+
+
 }
