@@ -12,7 +12,7 @@ define('API_URL', 'https://utn-students-api.herokuapp.com/api/');
 
 
 define("DB_HOST", "localhost");
-define("DB_NAME", "University");
+define("DB_NAME", "FindYourJob");
 define("DB_USER", "root");
 define("DB_PASS", "");
 
