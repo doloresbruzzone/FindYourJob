@@ -42,7 +42,8 @@
             else if($studentController->existsByEmail($student)){
                 $_SESSION['student'] = $student;
 
-                $this->companyController->ShowListViewStudent("Welcome!"); 
+                //$this->companyController->ShowListViewStudent("Welcome!"); 
+                $this->companyController->getConection();
             }
             else{
                 $this->Index("Error: el usuario no se encuentra en el sistema.");

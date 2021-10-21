@@ -5,6 +5,7 @@ namespace Controllers;
 use DAO\CompanyDAO as CompanyDAO;
 use Models\Company;
 use Utils\Utils as Utils;
+use DAO\Connection as Connection;
 
 class CompanyController
 {
@@ -131,7 +132,15 @@ class CompanyController
     }
 
     public function getConection(){
-        $connection = $this->companyDAO->getConection();
+        $connection = Connection::GetInstance();
+
+        if($connection != NULL){
+            require_once(VIEWS_PATH."conectionView.php");
+        }
+        else{
+            require_once(VIEWS_PATH."notConectionView.php");
+        }
+        
     }
 
 
