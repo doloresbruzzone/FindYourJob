@@ -5,7 +5,7 @@
           </a>
 	</div>
      <span class="navbar-text">
-          <strong>FindYourJob</strong>
+          <strong> FindYourJob</strong>
      </span>
      <ul class="navbar-nav ml-auto">
 

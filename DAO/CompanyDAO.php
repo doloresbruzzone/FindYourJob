@@ -9,15 +9,7 @@
 
         private $companyList = array();
         private $connection;
-        private $tabletName = "companies";
-
-        /* public function Add(Company $company) {
-            $this->RetrieveData();
-
-            array_push($this->companyList, $company);
-
-            $this->SaveData();
-        }*/
+        private $tabletName = "company";
 
         public function Add(Company $company)
         {
@@ -41,11 +33,7 @@
             }
         }
         
-        /*public function GetAll(){
-            $this->RetrieveData();
 
-            return $this->companyList;
-        }*/
         public function GetAll()
         {
     
@@ -73,12 +61,12 @@
 
             foreach($this->companyList as $company){
                 $valuesArray["name"] = $company->getName();
-                $valuesArray["yearFoundation"] = $company->getYearFoundation();
+                $valuesArray["year_foundation"] = $company->getYearFoundation();
                 $valuesArray["city"] = $company->getCity();
                 $valuesArray["description"] = $company->getDescription();
                 $valuesArray["logo"] = $company->getLogo();
                 $valuesArray["email"] = $company->getEmail();
-                $valuesArray["phoneNumber"] = $company->getPhoneNumber();
+                $valuesArray["phone_number"] = $company->getPhoneNumber();
 
                 array_push($arrayToEncode, $valuesArray);
             }
@@ -103,12 +91,12 @@
                 $company = new Company();
                 //Agregar id
                 $company->setName($valuesArray["name"]);
-                $company->setYearFoundation($valuesArray["yearFoundation"]);
+                $company->setYearFoundation($valuesArray["year_foundation"]);
                 $company->setCity($valuesArray["city"]);
                 $company->setDescription($valuesArray["description"]);
                 $company->setLogo($valuesArray["logo"]);
                 $company->setEmail($valuesArray["email"]);
-                $company->setPhoneNumber($valuesArray["phoneNumber"]);
+                $company->setPhoneNumber($valuesArray["phone_number"]);
                 
 
                 array_push($listCompanies, $company);
