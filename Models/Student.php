@@ -5,15 +5,19 @@
     class Student extends Person
     {
         private $studentId; 
-        private $fileNumber;
-        private $gender; 
-        private $birthDate;
-        private $phoneNumber;
-        private $active;
-        private $careerId;
+        private $dni;
+        private $email;
+        private $password;
         private $firstName;
         private $lastName;
-        private $dni;
+        private $phoneNumber;
+        private $birthDate;
+        private $gender; 
+        private $fileNumber;
+        private $careerId;
+        private $active;
+        private $roleId;
+        
         
         public function getFirstName()
         {
@@ -99,6 +103,38 @@
 
         public function setCareerId($careerId){
             $this->careerId = $careerId;
+        }
+
+        public function getEmail()
+        {
+            return $this->email;
+        }
+    
+        public function setEmail($email)
+        {
+            $this->email = $email;
+    
+            return $this;
+        }
+    
+        function getPassword()
+        {
+            return $this->password;
+        }
+    
+        public function setPassword($password)
+        {
+            $this->password = $password;
+    
+            return $this;
+        }
+
+        public function getRoleId(){
+            return $this->roleId;
+        }
+
+        public function setRoleId($roleId){
+            $this->roleId = $roleId;
         }
     }
 ?>
