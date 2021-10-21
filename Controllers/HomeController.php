@@ -36,14 +36,15 @@
                 $_SESSION['admin'] = $admin;
 
                 //$this->companyController->ShowListViewAdmin("Welcome Admin");
-                require_once(VIEWS_PATH . "home-admin.php");
+                ///require_once(VIEWS_PATH . "home-admin.php");
+                require_once(VIEWS_PATH . "addCompany.php");
 
             }
             else if($studentController->existsByEmail($student)){
                 $_SESSION['student'] = $student;
 
-                //$this->companyController->ShowListViewStudent("Welcome!"); 
-                $this->companyController->getConection();
+                $this->companyController->ShowListViewStudent("Welcome!"); 
+                //$this->companyController->getConection();
             }
             else{
                 $this->Index("Error: el usuario no se encuentra en el sistema.");

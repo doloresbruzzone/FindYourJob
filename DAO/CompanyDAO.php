@@ -21,20 +21,21 @@
 
         public function Add(Company $company)
         {
-            $sql = "INSERT INTO companies(name, yearFoundation, city, description, logo, email, phoneNumber) 
-                    VALUES(:name, :yearFoundation, :city, :description, :logo, :email, :phoneNumber);";
+            try {
+
+            $sql = "INSERT INTO company(name, year_foundation, city, description, logo, email, phone_number) 
+                    VALUES(:name, :year_foundation, :city, :description, :logo, :email, :phone_number);";
     
             $parameters['name'] = $company->getName();
-            $parameters['yearFoundation'] = $company->getYearFoundation();
+            $parameters['year_foundation'] = $company->getYearFoundation();
             $parameters['city'] = $company->getCity();
             $parameters['description'] = $company->getDescription();
             $parameters['logo']=$company->getLogo();
             $parameters['email'] = $company->getEmail();
-            $parameters['phoneNumber'] = $company->getPhoneNumber();
+            $parameters['phone_number'] = $company->getPhoneNumber();
     
-            try {
-                $this->connection = Connection::getInstance();
-                return $this->connection->executeNonQuery($sql, $parameters);
+                $this->connection = Connection::GetInstance();
+                $this->connection->ExecuteNonQuery($sql, $parameters);
             } catch (\PDOException $exeption) {
                 throw $exeption;
             }
