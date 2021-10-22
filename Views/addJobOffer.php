@@ -21,12 +21,16 @@
                                  
                                  <label for="">Description</label>
                                  <input type="text" name="description" minlength="10" maxlength="1000" placeholder="Description" required>
-                                 <label for="">Email</label>
-                                 <input type="email" name="email" placeholder="Email"required>
-                                 <label for="">Phone Number</label>
-                                 <input type="text" name="phone" placeholder="Phone Number" required>
-                                 <label for="">Photo</label>
-                                 <input type="file" name ="logo"> 
+                                 
+                                 <select class="card-input card-select" name="cinemas" id="cinemas">
+                                   
+                                 <?php 
+                                   foreach($jobPositionList as $jobPosition)
+                                   {
+                                        echo '<option value="'.$jobPosition->getJobPositionId().'">'. $jobPosition->getDescription().'</option>';
+                                   }
+                                  ?>
+                                  </select> 
                               </div>
                          </div>
 
