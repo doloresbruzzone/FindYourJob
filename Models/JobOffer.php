@@ -12,19 +12,6 @@
         private $limit_date;
         private $timeState;
         private $studentState;
-        
-        public function __construct($idJobOffer, $studentId, $companyId, $jobPositionId, $description, $datetime, 
-                                    $limit_date, $timeState, $studentState){
-            $this->idJobOffer = $idJobOffer;
-            $this->studentId_JobOffer = $studentId;
-            $this->companyId_JobOffer = $companyId;
-            $this->jobPositionId_JobOffer = $jobPositionId;
-            $this->description = $description;
-            $this->datetime = $datetime;
-            $this->limit_date = $limit_date;
-            $this->timeState = $timeState;
-            $this->studentState = $studentState;
-        }
 
         public function setIdJobOffer($idJobOffer){
             $this->idJobOffer = $idJobOffer;

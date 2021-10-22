@@ -89,9 +89,9 @@
                 $i++;
 
                 if($queryType == QueryType::Query)
-                    $this->pdoStatement->bindParam(":".$parameterName, $parameters[$parameterName]);
+                    $this->pdoStatement->bindParam(":".$parameterName, $value);
                 else
-                    $this->pdoStatement->bindParam($i, $parameters[$parameterName]);
+                    $this->pdoStatement->bindParam($i, $value);
             }
         }
     }

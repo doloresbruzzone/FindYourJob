@@ -6,11 +6,6 @@
         private $idRole;
         private $description;
 
-        public function __construct($idRole, $description){
-            $this->idRole = $idRole;
-            $this->description = $description;
-        }
-
         public function setIdRole($idRole){
             $this->idRole = $idRole;
         }
