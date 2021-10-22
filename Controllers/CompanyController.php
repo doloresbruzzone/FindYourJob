@@ -72,11 +72,11 @@ class CompanyController
             $this->ViewAddCompany("Company added");
     }
 
-    public function DeleteCompany($name, $email)
+    public function DeleteCompany($email)
     {
         Utils::checkAdminSession();
 
-        $removed = $this->companyDAO->RemoveCompany($name, $email);
+        $removed = $this->companyDAO->DeleteCompany($email);
         
         if($removed == 1){
          

@@ -32,7 +32,6 @@
                 throw $exeption;
             }
         }
-        
 
         public function GetAll()
         {
@@ -53,37 +52,9 @@
                 return false;
             }
         }
-
-
-        private function SaveData(){
-
-            $arrayToEncode = array();
-
-            foreach($this->companyList as $company){
-                $valuesArray["name"] = $company->getName();
-                $valuesArray["year_foundation"] = $company->getYearFoundation();
-                $valuesArray["city"] = $company->getCity();
-                $valuesArray["description"] = $company->getDescription();
-                $valuesArray["logo"] = $company->getLogo();
-                $valuesArray["email"] = $company->getEmail();
-                $valuesArray["phone_number"] = $company->getPhoneNumber();
-
-                array_push($arrayToEncode, $valuesArray);
-            }
-          
-            $jsonContent = json_encode($arrayToEncode, JSON_PRETTY_PRINT);
-
-            $jsonPath = $this->GetJsonFilePath();
-
-            file_put_contents($jsonPath, $jsonContent);
-        }
-
+        
         private function RetrieveData(){
-            //$this->companyList = array();
 
-            //$jsonPath = $this->GetJsonFilePath(); //Get correct json path
-            //$jsonContent = file_get_contents($jsonPath);
-            //$arrayToDecode = ($jsonContent) ? json_decode($jsonContent, true) : array();
             $listCompanies = array ();
 
             foreach($this->companiesList as $valuesArray){
@@ -98,13 +69,12 @@
                 $company->setEmail($valuesArray["email"]);
                 $company->setPhoneNumber($valuesArray["phone_number"]);
                 
-
                 array_push($listCompanies, $company);
             }
 
             return $listCompanies;
         }
-
+        
         public function GetCompany($companyName, $email)
         {
             $this->RetrieveData();
@@ -134,10 +104,10 @@
             return $flag;
         }*/
 
-        public function DeleteCompany($companyId)
+        public function DeleteCompany($email)
         {
-            $sql = "DELETE FROM companies WHERE companyId=:companyId";
-            $parameters['companyId'] = $companyId;
+            $sql = "DELETE FROM company WHERE email = :email";
+            $parameters['email'] = $email;
     
             try {
                 $this->connection = Connection::getInstance();

@@ -54,9 +54,6 @@
             <tbody align=center>
               <tr>
                 <td>
-                  <input type="text" name="name" style="height: 40px;"  placeholder="company name" required>  
-                </td>
-                <td>
                     <input type="email" name="email" style="height: 40px;" placeholder="company email" required>
                 </td>
 
