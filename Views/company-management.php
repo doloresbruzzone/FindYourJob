@@ -68,5 +68,6 @@
       </div>
 </main>
 
+<h4> Probando valor de BD <?php echo FRONT_ROOT."Company/getConection" . "////" ?></h4>
 
 
