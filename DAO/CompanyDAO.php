@@ -88,6 +88,30 @@
             return $comp;
         }
 
+
+        private function SaveData(){
+
+            $arrayToEncode = array();
+
+            foreach($this->companyList as $company){
+                $valuesArray["name"] = $company->getName();
+                $valuesArray["year_foundation"] = $company->getYearFoundation();
+                $valuesArray["city"] = $company->getCity();
+                $valuesArray["description"] = $company->getDescription();
+                $valuesArray["logo"] = $company->getLogo();
+                $valuesArray["email"] = $company->getEmail();
+                $valuesArray["phone_number"] = $company->getPhoneNumber();
+
+                array_push($arrayToEncode, $valuesArray);
+            }
+          
+            $jsonContent = json_encode($arrayToEncode, JSON_PRETTY_PRINT);
+
+            $jsonPath = $this->GetJsonFilePath();
+
+            file_put_contents($jsonPath, $jsonContent);
+        }
+
         /*public function RemoveCompany($companyName, $email) {
 
             $this->RetrieveData();
