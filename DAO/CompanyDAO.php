@@ -88,7 +88,7 @@
             return $comp;
         }
 
-
+/*
         private function SaveData(){
 
             $arrayToEncode = array();
@@ -111,22 +111,7 @@
 
             file_put_contents($jsonPath, $jsonContent);
         }
-
-        /*public function RemoveCompany($companyName, $email) {
-
-            $this->RetrieveData();
-            $flag=0;
-    
-            foreach($this->companyList as $company){
-                if(($company->getName() == $companyName) && ($company->getEmail() == $email)){
-                    $key = array_search($company, $this->companyList);
-                    unset($this->companyList[$key]);
-                    $flag=1;
-                }
-            }
-            $this->SaveData();
-            return $flag;
-        }*/
+        */
 
         public function DeleteCompany($email)
         {
