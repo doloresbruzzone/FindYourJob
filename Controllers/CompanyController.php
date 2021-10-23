@@ -86,15 +86,7 @@ class CompanyController
         Utils::checkAdminSession();
 
         $removed = $this->companyDAO->DeleteCompany($email);
-        
-        if($removed == 1){
-         
-            $this->ShowListViewAdmin("Company deleted");
-        }
-        else{ 
-          
-            $this->ShowListViewAdmin("error");
-        }
+        $this->ShowListViewAdmin("Company deleted");
     }
 
     public function UpdateCompany($name, $year, $city, $description, $email, $phone, $logo, $nameCompany , $emailCompany)
@@ -112,6 +104,12 @@ class CompanyController
         Utils::checkAdminSession();
         $companies = $this->companyDAO->GetAll();
         require_once(VIEWS_PATH."company-management.php");
+    }
+
+    public function ShowAdminMenu($message = "")
+    {
+        Utils::checkAdminSession();
+        require_once(VIEWS_PATH."home-admin.php");
     }
 
     public function LogOut(){
