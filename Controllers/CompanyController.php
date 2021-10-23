@@ -3,17 +3,21 @@
 namespace Controllers;
 
 use DAO\CompanyDAO as CompanyDAO;
-use Models\Company;
+use DAO\CityDAO as CityDAO;
+use Models\Company as Company;
+use Models\City as City;
 use Utils\Utils as Utils;
 use DAO\Connection as Connection;
 
 class CompanyController
 {
     private $companyDAO;
+    private $cityDao;
 
     public function __construct()
     {
         $this->companyDAO = new CompanyDAO();
+        $this->cityDao = new CityDAO();
     }
 
     public function ShowListViewStudent($message = "")
@@ -23,8 +27,11 @@ class CompanyController
         require_once(VIEWS_PATH."list-companies-std.php");
     }
 
-    function ViewAddCompany($message = ""){
+   public function ViewAddCompany($message = ""){
         Utils::checkAdminSession();
+
+        $listCity = $this->cityDao->GetCitys();
+        
         require_once(VIEWS_PATH."addCompany.php");
     }
 
@@ -54,9 +61,11 @@ class CompanyController
         Utils::checkAdminSession();
         require_once(VIEWS_PATH . "addCompany.php");
     }
-    public function AddCompany($name,$year,$city,$description,$email,$phone,$logo)
+    public function AddCompany($name,$year,$idcity,$description,$email,$phone,$logo)
     {
         Utils::checkAdminSession();
+
+        $city = $this->cityDao->GetCityXid($idcity);
 
         $newCompany = new Company();
             $newCompany->setName($name);

@@ -14,8 +14,15 @@
                                  <input type="text" name="name" placeholder="Name"required >
                                  <label for="">Year Foundation</label><br>
                                  <input type="number" name="year" min="0" max="2021" placeholder="Year" required><br>
-                                 <label for="">City</label>
-                                 <input type="text" name="city" placeholder="City" required>
+                                 <label for="city">City</label>
+                                 <div class="form-group">
+                                   <select name="city" >
+                                   <option disabled selected>Select...</option>
+                                   <?php if(isset($listCity)){ foreach($listCity as $city){ ?>
+                                   <option value="<?php echo $city->getIdCity();?>" ><?php echo $city->getName();?></option>
+                                   <?php } } ?>
+                                   </select>
+                                   </div>
                                  <label for="">Description</label>
                                  <input type="text" name="description" minlength="10" maxlength="1000" placeholder="Description" required>
                                  <label for="">Email</label>

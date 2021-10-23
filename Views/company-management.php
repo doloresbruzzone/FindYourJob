@@ -24,7 +24,7 @@
                       <tr>
                         <td><?php echo $company->getName(); ?></td>
                         <td><?php echo $company->getYearFoundation(); ?></td>
-                        <td><?php echo $company->getCity(); ?></td>
+                        <td><?php echo $company->getCity()->getName(); ?></td>
                         <td><?php echo $company->getDescription(); ?></td>
                         <td><?php echo $company->getEmail(); ?></td>
                         <td><?php echo $company->getPhoneNumber(); ?></td>

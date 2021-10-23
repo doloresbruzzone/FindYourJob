@@ -35,9 +35,9 @@
                 $admin->setIsAdmin(true);
                 $_SESSION['admin'] = $admin;
 
-                //$this->companyController->ShowListViewAdmin("Welcome Admin");
+                $this->companyController->ViewAddCompany("Welcome Admin");
                 ///require_once(VIEWS_PATH . "home-admin.php");
-                require_once(VIEWS_PATH . "addCompany.php");
+                //require_once(VIEWS_PATH . "addCompany.php");
 
             }
             else if($studentController->existsByEmail($student)){
