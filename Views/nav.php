@@ -10,6 +10,10 @@
      <ul class="navbar-nav ml-auto">
 
           <?php if(isset($_SESSION['admin'])) { ?>
+          
+           <li class="nav-item">
+               <a class="nav-link" href="<?php echo FRONT_ROOT ?>Company/ShowAdminMenu">Menu</a>
+          </li>
           <li class="nav-item">
                <a class="nav-link" href="<?php echo FRONT_ROOT ?>Company/ShowListViewAdmin">Company Management</a>
           </li>

@@ -106,6 +106,12 @@ class CompanyController
         require_once(VIEWS_PATH."company-management.php");
     }
 
+    public function ShowAdminMenu($message = "")
+    {
+        Utils::checkAdminSession();
+        require_once(VIEWS_PATH."home-admin.php");
+    }
+
     public function LogOut(){
         Utils::logout();
     }

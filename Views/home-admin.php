@@ -24,7 +24,6 @@
             <a class="btn btn-success btn-x2" href="<?php echo FRONT_ROOT ?>Company/ShowListViewAdmin">Company Management</a>
              <!--<a class="btn btn-primary btn-xl" href="#">Lista de Propuestas</a>-->
             <a class="btn btn-success btn-xl" href="<?php echo FRONT_ROOT ?>Student/ShowListView">Students List</a>
-            <a class="btn btn-success btn-xl" href="<?php echo FRONT_ROOT ?>Company/LogOut">LogOut</a>
         </div>
     </header>
 

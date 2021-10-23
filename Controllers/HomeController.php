@@ -35,8 +35,8 @@
                 $admin->setIsAdmin(true);
                 $_SESSION['admin'] = $admin;
 
-                $this->companyController->ViewAddCompany("Welcome Admin");
-                ///require_once(VIEWS_PATH . "home-admin.php");
+                //$this->companyController->ViewAddCompany("Welcome Admin");
+                require_once(VIEWS_PATH . "home-admin.php");
                 //require_once(VIEWS_PATH . "addCompany.php");
 
             }
