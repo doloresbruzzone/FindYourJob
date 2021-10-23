@@ -13,7 +13,7 @@
                                  <label for="">Name</label>
                                  <input type="text" name="name" value = "<?php  echo $company->getName();?>" required>
                                  <label for="">Year Foundation</label>
-                                 <input type="number" name="year" value = "<?php  echo $company->getYearFoundation();?>" min="0" required>
+                                 <input type="number" name="year_foundation" value = "<?php  echo $company->getYearFoundation();?>" min="0" required>
                                  <label for="">City</label>
                                  <input type="text" name="city" value = "<?php  echo $company->getCity();?>" required>
                                  <label for="">Description</label>
@@ -21,7 +21,7 @@
                                  <label for="">Email</label>
                                  <input type="email" name="email"  value = "<?php  echo $company->getEmail();?>" required>
                                  <label for="">Phone Number</label>
-                                 <input type="text" name="phone" value = "<?php  echo $company->getPhoneNumber();?>"  required>
+                                 <input type="text" name="phone_number" value = "<?php  echo $company->getPhoneNumber();?>"  required>
                                  <label for="">Photo</label>
                                  <input type="file" name ="logo" value ="<?php/* echo IMGCOOL_PATH.$product->getPhoto();*/?>"> 
                               </div>

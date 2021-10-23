@@ -27,7 +27,7 @@
             $parameters['phone_number'] = $company->getPhoneNumber();
     
                 $this->connection = Connection::GetInstance();
-                $this->connection->ExecuteNonQuery($sql, $parameters);
+                return $this->connection->ExecuteNonQuery($sql, $parameters);
             } catch (\PDOException $exeption) {
                 throw $exeption;
             }
@@ -56,7 +56,7 @@
         private function RetrieveData(){
 
             $listCompanies = array ();
-
+            
             foreach($this->companiesList as $valuesArray){
 
                 $company = new Company();
@@ -75,44 +75,7 @@
             return $listCompanies;
         }
         
-        public function GetCompany($companyName, $email)
-        {
-            $this->RetrieveData();
-            $comp = null;
-
-            foreach($this->companyList as $company) {
-                if($company->getName() == $companyName && $company->getEmail() == $email) {
-                    $comp = $company;
-                }
-            }
-            return $comp;
-        }
-
-/*
-        private function SaveData(){
-
-            $arrayToEncode = array();
-
-            foreach($this->companyList as $company){
-                $valuesArray["name"] = $company->getName();
-                $valuesArray["year_foundation"] = $company->getYearFoundation();
-                $valuesArray["city"] = $company->getCity();
-                $valuesArray["description"] = $company->getDescription();
-                $valuesArray["logo"] = $company->getLogo();
-                $valuesArray["email"] = $company->getEmail();
-                $valuesArray["phone_number"] = $company->getPhoneNumber();
-
-                array_push($arrayToEncode, $valuesArray);
-            }
-          
-            $jsonContent = json_encode($arrayToEncode, JSON_PRETTY_PRINT);
-
-            $jsonPath = $this->GetJsonFilePath();
-
-            file_put_contents($jsonPath, $jsonContent);
-        }
-        */
-
+        
         public function DeleteCompany($email)
         {
             $sql = "DELETE FROM company WHERE email = :email";
@@ -124,19 +87,6 @@
             } catch (\PDOException $exception) {
                 throw $exception;
             }
-        }
-
-        //Need this function to return correct file json path
-        function GetJsonFilePath(){
-
-            $initialPath = "Data/companies.json";
-            
-            if(file_exists($initialPath)){
-                $jsonFilePath = $initialPath;
-            }else{
-                $jsonFilePath = "../".$initialPath;
-            }
-            return $jsonFilePath;
         }
 
 
@@ -166,23 +116,39 @@
            }
         */
 
-        public function UpdateCompany(Company $company)
+        public function GetCompany($companyName, $email)
         {
-            $sql = "UPDATE campanies SET name=:name, yearFoundation=:yearFoundation, city=:city, description=:description, logo=:logo, email=:email, phoneNumber=:phoneNumber WHERE companyId= :companyId;";
+            $this->RetrieveData();
+            $comp = null;
+
+            foreach($this->companyList as $company) {
+                if($company->getName() == $companyName && $company->getEmail() == $email) {
+                    $comp = $company;
+                }
+            }
+            return $comp;
+        }
+
+        public function UpdateCompany($name, $year_foundation, $city, $description, $email, $phone_number, $logo)
+        {
+
+            try{
+
+            $sql = "UPDATE company SET name=:name, year_foundation=:year_foundation, city=:city, description=:description, logo=:logo, email=:email, phone_number=:phone_number WHERE companyId = :companyId;";
     
             //$parameters['companyId'] = $company->getCompanyId();
-            $parameters['name'] = $company->getName();
-            $parameters['yearFoundation'] = $company->getYearFoundation();
-            $parameters['city'] = $company->getCity();
-            $parameters['description'] = $company->getDescription();
-            $parameters['logo'] = $company->getLogo();
-            $parameters['email'] = $company->getEmail();
-            $parameters['phoneNumber'] = $company->getPhoneNumber();
-    
-            try {
-                $this->connection = Connection::getInstance();
-                return $this->connection->executeNonQuery($sql, $parameters);
-            } catch (\PDOException $exception) {
+            $parameters['name'] = $name;
+            $parameters['year_foundation'] = $year_foundation;
+            $parameters['city'] = $city;
+            $parameters['description'] = $description;
+            $parameters['logo'] = $logo;
+            $parameters['email'] = $email;
+            $parameters['phone_number'] = $phone_number;
+            
+            $this->connection = Connection::getInstance();
+            return $this->connection->ExecuteNonQuery($sql, $parameters);
+
+            }   catch (\PDOException $exception) {
                 throw $exception;
             }
         }
@@ -205,10 +171,6 @@
             }
         }
 
-           public function GetInstance(){
-            $this->connection = Connection::getInstance();
-            return $this->connection;
-           }
        
 
     }

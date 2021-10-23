@@ -31,7 +31,7 @@ class CompanyController
     public function ShowModifyCompany($nameCompany , $email)
     {
 
-       $company =  $this->companyDAO->GetCompany($nameCompany , $email);
+       $company = $this->companyDAO->GetCompany($nameCompany , $email);
 
         require_once(VIEWS_PATH."modifyCompany.php");
     }
@@ -88,11 +88,11 @@ class CompanyController
         }
     }
 
-    public function ModifyCompany($name, $year, $city, $description, $email, $phone, $logo, $nameCompany , $emailCompany)
+    public function UpdateCompany($name, $year, $city, $description, $email, $phone, $logo, $nameCompany , $emailCompany)
     {
         Utils::checkAdminSession();
 
-        $this->companyDAO->modifyCompany($name, $year, $city, $description, $email, $phone, $logo,$nameCompany , $emailCompany);
+        $this->companyDAO->UpdateCompany($name, $year, $city, $description, $email, $phone, $logo,$nameCompany , $emailCompany);
 
         $this->ShowListViewAdmin("Company modified");
     }
