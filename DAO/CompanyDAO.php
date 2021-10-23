@@ -85,7 +85,8 @@
              $parameters['email'] = $email;
      
              try {
-                $result = $this->connection->ExecuteNonQuery($query,$parameters);
+                ///$this->connection = Connection::getInstance();
+                $result = $this->connection->ExecuteNonQuery($sql,$parameters);
     
             }  catch (\PDOException $exception) {
                 throw $exception;

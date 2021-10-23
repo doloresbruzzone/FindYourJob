@@ -10,7 +10,7 @@
         private $logo;
         private $email;
         private $phoneNumber;
-        private City $city;
+        private $city;
 
        
         public function getIdCompany()
