@@ -20,10 +20,6 @@
             require_once(VIEWS_PATH."login.php");
         }   
 
-        /* 
-        verifico si es admin
-        verifico si es student-> si lo encuentro en la api x el mail
-        */
         public function login($email){
             $studentController = new StudentController();
             $student = new Student();
@@ -35,16 +31,15 @@
                 $admin->setIsAdmin(true);
                 $_SESSION['admin'] = $admin;
 
-                //$this->companyController->ViewAddCompany("Welcome Admin");
                 require_once(VIEWS_PATH . "home-admin.php");
-                //require_once(VIEWS_PATH . "addCompany.php");
 
             }
             else if($studentController->existsByEmail($student)){
                 $_SESSION['student'] = $student;
 
-                $this->companyController->ShowListViewStudent("Welcome!"); 
-                //$this->companyController->getConection();
+                //$this->companyController->ShowListViewStudent("Welcome!"); 
+                require_once(VIEWS_PATH . "home-student.php");
+
             }
             else{
                 $this->Index("Error: el usuario no se encuentra en el sistema.");
