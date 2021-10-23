@@ -20,7 +20,7 @@
             $this->jobPositionDAO = new JobPositionDAO();
         }
 
-        public function viewAddJobOffer() {
+        public function FormAddJobOffer() {
             Utils::checkAdminSession();
 
             $jobPositionList = $this->jobPositionDAO->GetAll();
@@ -31,18 +31,20 @@
         {
             if($description != "" && $datetime != "" && $limit_date != "" && $jobPositionId_JobOffer != "")
             {
-                $err_string = $this->jobOfferDAO->add($description, $datetime, $limit_date, $jobPositionId_JobOffer);
-    
-                if ($err_string) {
-                    $alertMessage = $err_string;
-                    $redirectUrl = 'JobOffer/showAddJobOffer';
-                } else {
-                    $alertMessage = 'Job offer added successfully.';
-                    $redirectUrl = 'JobOffer';
-                }
-               /*  include(ROOT."presentation/alert.php"); */
+                $newJobOff = new JobOffer();
+                $newJobOff->setDescription($description);
+                $newJobOff->setDatetime($datetime);
+                $newJobOff->setLimitDate($limit_date);
+                $newJobOff->setJobPositionId_JobOffer($jobPositionId_JobOffer);
+                
+                $this->jobOfferDAO->add($newJobOff);
+                $this->FormAddJobOffer(); 
+                //habria q agregar para mostrar comentario de exito/error
             }
         }
+
+        
+
 
         
 

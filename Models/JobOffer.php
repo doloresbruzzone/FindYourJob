@@ -4,9 +4,9 @@
     class JobOffer {
 
         private $idJobOffer;
-        private $studentId_JobOffer;
-        private $companyId_JobOffer;
-        private $jobPositionId_JobOffer;
+        private $student;
+        private $company;
+        private $jobPosition;
         private $description;
         private $datetime;
         private $limit_date;
@@ -21,16 +21,16 @@
             return $this->idJobOffer;
         }
 
-        public function setStudentId_JobOffer($studentId){
-            $this->studentIdJobOffer = $studentId;
+        public function setStudent($student){
+            $this->student = $student;
         }
 
-        public function getStudentId_JobOffer(){
-            return $this->studentId_JobOffer;
+        public function getStudent(){
+            return $this->student;
         }
 
-        public function setCompanyId_JobOffer($companyId){
-            $this->companyId_JobOffer = $companyId;
+        public function setCompany($company){
+            $this->company = $company;
         }
 
         public function getCompanyId_JobOffer(){
