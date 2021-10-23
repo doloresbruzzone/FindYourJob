@@ -47,7 +47,6 @@
         <table  style="max-width: 35%;">
             <thead>
               <tr>
-                <th style="width: 100px;">Name</th>
                 <th style="width: 100px;">Email</th>
               </tr>
             </thead>

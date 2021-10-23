@@ -86,15 +86,7 @@ class CompanyController
         Utils::checkAdminSession();
 
         $removed = $this->companyDAO->DeleteCompany($email);
-        
-        if($removed == 1){
-         
-            $this->ShowListViewAdmin("Company deleted");
-        }
-        else{ 
-          
-            $this->ShowListViewAdmin("error");
-        }
+        $this->ShowListViewAdmin("Company deleted");
     }
 
     public function UpdateCompany($name, $year, $city, $description, $email, $phone, $logo, $nameCompany , $emailCompany)
