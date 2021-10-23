@@ -31,7 +31,13 @@
                 $admin->setIsAdmin(true);
                 $_SESSION['admin'] = $admin;
 
+<<<<<<< HEAD
                 require_once(VIEWS_PATH . "home-admin.php");
+=======
+                $this->companyController->ViewAddCompany("Welcome Admin");
+                ///require_once(VIEWS_PATH . "home-admin.php");
+                //require_once(VIEWS_PATH . "addCompany.php");
+>>>>>>> parent of cc2575d (Merge branch 'develop' of https://github.com/doloresbruzzone/FindYourJob into develop)
 
             }
             else if($studentController->existsByEmail($student)){
