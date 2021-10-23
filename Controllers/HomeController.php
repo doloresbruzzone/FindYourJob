@@ -20,6 +20,10 @@
             require_once(VIEWS_PATH."login.php");
         }   
 
+        /* 
+        verifico si es admin
+        verifico si es student-> si lo encuentro en la api x el mail
+        */
         public function login($email){
             $studentController = new StudentController();
             $student = new Student();
@@ -31,21 +35,18 @@
                 $admin->setIsAdmin(true);
                 $_SESSION['admin'] = $admin;
 
-<<<<<<< HEAD
+
                 require_once(VIEWS_PATH . "home-admin.php");
-=======
+
                 $this->companyController->ViewAddCompany("Welcome Admin");
-                ///require_once(VIEWS_PATH . "home-admin.php");
-                //require_once(VIEWS_PATH . "addCompany.php");
->>>>>>> parent of cc2575d (Merge branch 'develop' of https://github.com/doloresbruzzone/FindYourJob into develop)
+
+                require_once(VIEWS_PATH . "home-admin.php");
 
             }
             else if($studentController->existsByEmail($student)){
                 $_SESSION['student'] = $student;
 
-                //$this->companyController->ShowListViewStudent("Welcome!"); 
-                require_once(VIEWS_PATH . "home-student.php");
-
+                $this->companyController->ShowListViewStudent("Welcome!"); 
             }
             else{
                 $this->Index("Error: el usuario no se encuentra en el sistema.");

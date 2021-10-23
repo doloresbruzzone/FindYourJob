@@ -140,6 +140,17 @@ class CompanyController
         require_once(VIEWS_PATH . "list-companies-std.php");
     }
 
+    public function getConection(){
+        $connection = Connection::GetInstance();
+
+        if($connection != NULL){
+            require_once(VIEWS_PATH."conectionView.php");
+        }
+        else{
+            require_once(VIEWS_PATH."notConectionView.php");
+        }
+        
+    }
 
 
 }
